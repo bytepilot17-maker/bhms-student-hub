@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Upper Limb MCQ Practice | First Year BHMS</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
+}
+
+header{
+    background:linear-gradient(135deg,#0d47a1,#1976d2);
+    color:white;
+    padding:25px 15px;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+}
+
+header h1{
+    font-size:26px;
+    margin-bottom:7px;
+}
+
+header p{
+    font-size:14px;
+    opacity:0.95;
+}
+
+.container{
+    max-width:850px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+.info-box{
+    background:white;
+    border-radius:15px;
+    padding:18px;
+    margin-bottom:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.07);
+    text-align:center;
+}
+
+.info-box h2{
+    color:#0d47a1;
+    margin-bottom:8px;
+    font-size:21px;
+}
+
+.info-box p{
+    font-size:14px;
+    line-height:1.6;
+    color:#555;
+}
+
+.badge{
+    display:inline-block;
+    margin-top:10px;
+    background:#e3f2fd;
+    color:#0d47a1;
+    padding:7px 13px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.quiz-box{
+    background:white;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.08);
+}
+
+.quiz-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+    flex-wrap:wrap;
+}
+
+.progress{
+    color:#0d47a1;
+    font-weight:bold;
+}
+
+.score{
+    background:#e8f5e9;
+    color:#2e7d32;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.question{
+    font-size:19px;
+    line-height:1.5;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.option{
+    width:100%;
+    text-align:left;
+    padding:14px 15px;
+    margin-bottom:12px;
+    border:2px solid #e0e6ef;
+    background:#fff;
+    border-radius:11px;
+    cursor:pointer;
+    font-size:15px;
+    transition:0.2s;
+}
+
+.option:hover{
+    border-color:#1976d2;
+    background:#f5faff;
+}
+
+.option.correct{
+    background:#dff5e3;
+    border-color:#2e7d32;
+    color:#1b5e20;
+    font-weight:bold;
+}
+
+.option.wrong{
+    background:#ffebee;
+    border-color:#c62828;
+    color:#b71c1c;
+    font-weight:bold;
+}
+
+.option:disabled{
+    cursor:not-allowed;
+}
+
+.explanation{
+    display:none;
+    background:#f5f7fa;
+    border-left:4px solid #1976d2;
+    padding:13px;
+    margin-top:15px;
+    border-radius:8px;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.next-btn,
+.restart-btn,
+.back-btn{
+    border:none;
+    padding:13px 22px;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.next-btn{
+    background:#1976d2;
+    color:white;
+    margin-top:18px;
+    display:none;
+}
+
+.next-btn:hover{
+    background:#0d47a1;
+}
+
+.result{
+    display:none;
+    text-align:center;
+    padding:20px 5px;
+}
+
+.result h2{
+    color:#0d47a1;
+    margin-bottom:12px;
+}
+
+.final-score{
+    font-size:32px;
+    font-weight:bold;
+    color:#1976d2;
+    margin:15px 0;
+}
+
+.result p{
+    line-height:1.6;
+    color:#555;
+}
+
+.restart-btn{
+    background:#1976d2;
+    color:white;
+    margin-top:18px;
+}
+
+.bottom{
+    text-align:center;
+    margin:25px 0 10px;
+}
+
+.back-btn{
+    background:#37474f;
+    color:white;
+    text-decoration:none;
+    display:inline-block;
+}
+
+.back-btn:hover{
+    background:#263238;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#777;
+    font-size:13px;
+}
+
+@media(max-width:600px){
+    header h1{
+        font-size:22px;
+    }
+
+    .quiz-box{
+        padding:17px;
+    }
+
+    .question{
+        font-size:17px;
+    }
+
+    .option{
+        font-size:14px;
+        padding:13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🦴 Upper Limb MCQ Practice</h1>
+    <p>First Year BHMS • Anatomy</p>
+</header>
+
+<div class="container">
+
+    <div class="info-box">
+        <h2>📚 Upper Limb</h2>
+        <p>
+            Practice important Upper Limb questions based on
+            BHMS University / MUHS previous-year question themes.
+        </p>
+
+        <span class="badge">
+            🎓 University PYQ Based
+        </span>
+    </div>
+
+    <div class="quiz-box">
+
+        <div id="quizArea">
+
+            <div class="quiz-top">
+                <div class="progress" id="progress">
+                    Question 1 of 20
+                </div>
+
+                <div class="score" id="score">
+                    Score: 0
+                </div>
+            </div>
+
+            <div class="question" id="question"></div>
+
+            <div id="options"></div>
+
+            <div class="explanation" id="explanation"></div>
+
+            <button class="next-btn" id="nextBtn" onclick="nextQuestion()">
+                Next Question →
+            </button>
+
+        </div>
+
+        <div class="result" id="result">
+
+            <h2>🎉 Quiz Completed!</h2>
+
+            <div class="final-score" id="finalScore">
+                0 / 20
+            </div>
+
+            <p id="percentage"></p>
+
+            <p>
+                Keep practicing Upper Limb anatomy and revise the
+                frequently asked university topics.
+            </p>
+
+            <button class="restart-btn" onclick="restartQuiz()">
+                🔄 Restart Quiz
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="bottom">
+        <a href="anatomy-mcq.html" class="back-btn">
+            ← Back to Anatomy Chapters
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Student Seva Maharashtra • First Year BHMS
+</footer>
+
+
+<script>
+
+const questions = [
+
+{
+    question:"The roots of the brachial plexus are formed by which spinal nerves?",
+    options:[
+        "C1–C4",
+        "C5–T1",
+        "T1–T5",
+        "C4–T2"
+    ],
+    answer:1,
+    explanation:"The brachial plexus is formed by the anterior rami of C5, C6, C7, C8 and T1 spinal nerves."
+},
+
+{
+    question:"Which of the following is NOT a branch of the lateral cord of the brachial plexus?",
+    options:[
+        "Lateral pectoral nerve",
+        "Musculocutaneous nerve",
+        "Lateral root of median nerve",
+        "Radial nerve"
+    ],
+    answer:3,
+    explanation:"The radial nerve is a terminal branch of the posterior cord, not the lateral cord."
+},
+
+{
+    question:"The medial boundary of the cubital fossa is formed by:",
+    options:[
+        "Brachioradialis",
+        "Pronator teres",
+        "Brachialis",
+        "Supinator"
+    ],
+    answer:1,
+    explanation:"The medial boundary of the cubital fossa is formed by the pronator teres muscle."
+},
+
+{
+    question:"Which nerve is commonly affected in wrist drop?",
+    options:[
+        "Median nerve",
+        "Ulnar nerve",
+        "Radial nerve",
+        "Musculocutaneous nerve"
+    ],
+    answer:2,
+    explanation:"Radial nerve injury can cause loss of wrist and finger extension, producing wrist drop."
+},
+
+{
+    question:"Which muscle is supplied by the musculocutaneous nerve?",
+    options:[
+        "Biceps brachii",
+        "Triceps brachii",
+        "Pronator teres",
+        "Flexor carpi ulnaris"
+    ],
+    answer:0,
+    explanation:"The musculocutaneous nerve supplies the muscles of the anterior compartment of the arm, including biceps brachii."
+},
+
+{
+    question:"Which nerve passes through the carpal tunnel?",
+    options:[
+        "Ulnar nerve",
+        "Radial nerve",
+        "Median nerve",
+        "Musculocutaneous nerve"
+    ],
+    answer:2,
+    explanation:"The median nerve passes deep to the flexor retinaculum through the carpal tunnel."
+},
+
+{
+    question:"The anatomical snuff box is mainly related to which artery?",
+    options:[
+        "Ulnar artery",
+        "Radial artery",
+        "Brachial artery",
+        "Axillary artery"
+    ],
+    answer:1,
+    explanation:"The radial artery passes through the anatomical snuff box."
+},
+
+{
+    question:"Which muscle is the chief abductor of the arm from 15° to 90°?",
+    options:[
+        "Supraspinatus",
+        "Deltoid",
+        "Teres major",
+        "Pectoralis major"
+    ],
+    answer:1,
+    explanation:"Deltoid is the main muscle responsible for abduction of the arm from approximately 15° to 90°."
+},
+
+{
+    question:"The first 15° of abduction of the arm is mainly initiated by:",
+    options:[
+        "Deltoid",
+        "Supraspinatus",
+        "Infraspinatus",
+        "Teres minor"
+    ],
+    answer:1,
+    explanation:"Supraspinatus initiates abduction of the arm for approximately the first 15°."
+},
+
+{
+    question:"Which muscle is NOT a part of the rotator cuff?",
+    options:[
+        "Supraspinatus",
+        "Infraspinatus",
+        "Teres minor",
+        "Teres major"
+    ],
+    answer:3,
+    explanation:"Rotator cuff muscles are Supraspinatus, Infraspinatus, Teres minor and Subscapularis. Teres major is not part of the rotator cuff."
+},
+
+{
+    question:"Which nerve supplies the deltoid muscle?",
+    options:[
+        "Radial nerve",
+        "Axillary nerve",
+        "Median nerve",
+        "Ulnar nerve"
+    ],
+    answer:1,
+    explanation:"The deltoid muscle is supplied by the axillary nerve."
+},
+
+{
+    question:"The axillary nerve winds around the surgical neck of which bone?",
+    options:[
+        "Radius",
+        "Ulna",
+        "Humerus",
+        "Scapula"
+    ],
+    answer:2,
+    explanation:"The axillary nerve winds around the surgical neck of the humerus with the posterior circumflex humeral vessels."
+},
+
+{
+    question:"Which artery is the continuation of the axillary artery beyond the lower border of teres major?",
+    options:[
+        "Radial artery",
+        "Ulnar artery",
+        "Brachial artery",
+        "Subclavian artery"
+    ],
+    answer:2,
+    explanation:"The axillary artery continues as the brachial artery at the lower border of teres major."
+},
+
+{
+    question:"Which artery is a terminal branch of the brachial artery?",
+    options:[
+        "Radial artery",
+        "Axillary artery",
+        "Subclavian artery",
+        "Thoracoacromial artery"
+    ],
+    answer:0,
+    explanation:"The brachial artery terminates by dividing into the radial and ulnar arteries."
+},
+
+{
+    question:"Which nerve lies behind the medial epicondyle of the humerus?",
+    options:[
+        "Median nerve",
+        "Radial nerve",
+        "Ulnar nerve",
+        "Axillary nerve"
+    ],
+    answer:2,
+    explanation:"The ulnar nerve passes behind the medial epicondyle and is commonly called the 'funny bone' nerve."
+},
+
+{
+    question:"Which carpal bone is located in the proximal row on the lateral side?",
+    options:[
+        "Scaphoid",
+        "Pisiform",
+        "Hamate",
+        "Capitate"
+    ],
+    answer:0,
+    explanation:"The scaphoid is the lateral-most carpal bone in the proximal row."
+},
+
+{
+    question:"Colles' fracture commonly involves the distal end of which bone?",
+    options:[
+        "Ulna",
+        "Radius",
+        "Humerus",
+        "Scaphoid"
+    ],
+    answer:1,
+    explanation:"Colles' fracture is a fracture of the distal radius, classically associated with a fall on an outstretched hand."
+},
+
+{
+    question:"Which nerve is the largest branch of the posterior cord of the brachial plexus?",
+    options:[
+        "Axillary nerve",
+        "Radial nerve",
+        "Median nerve",
+        "Ulnar nerve"
+    ],
+    answer:1,
+    explanation:"The radial nerve is the largest terminal branch of the posterior cord."
+},
+
+{
+    question:"The biceps brachii muscle is supplied by which nerve?",
+    options:[
+        "Radial nerve",
+        "Ulnar nerve",
+        "Musculocutaneous nerve",
+        "Median nerve"
+    ],
+    answer:2,
+    explanation:"Biceps brachii is supplied by the musculocutaneous nerve."
+},
+
+{
+    question:"Which structure passes deep to the flexor retinaculum at the wrist?",
+    options:[
+        "Median nerve",
+        "Radial artery",
+        "Cephalic vein",
+        "Ulnar nerve"
+    ],
+    answer:0,
+    explanation:"The median nerve passes through the carpal tunnel deep to the flexor retinaculum."
+}
+
+];
+
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
+
+const questionElement = document.getElementById("question");
+const optionsElement = document.getElementById("options");
+const progressElement = document.getElementById("progress");
+const scoreElement = document.getElementById("score");
+const explanationElement = document.getElementById("explanation");
+const nextButton = document.getElementById("nextBtn");
+
+function loadQuestion(){
+
+    answered = false;
+
+    const q = questions[currentQuestion];
+
+    progressElement.textContent =
+        "Question " + (currentQuestion + 1) +
+        " of " + questions.length;
+
+    scoreElement.textContent =
+        "Score: " + score;
+
+    questionElement.textContent = q.question;
+
+    optionsElement.innerHTML = "";
+
+    explanationElement.style.display = "none";
+    explanationElement.innerHTML = "";
+
+    nextButton.style.display = "none";
+
+    q.options.forEach((option,index)=>{
+
+        const button = document.createElement("button");
+
+        button.className = "option";
+
+        button.textContent =
+            String.fromCharCode(65 + index) + ") " + option;
+
+        button.onclick = function(){
+            selectAnswer(index,button);
+        };
+
+        optionsElement.appendChild(button);
+    });
+}
+
+function selectAnswer(selected,selectedButton){
+
+    if(answered) return;
+
+    answered = true;
+
+    const q = questions[currentQuestion];
+
+    const allOptions =
+        document.querySelectorAll(".option");
+
+    allOptions.forEach(button=>{
+        button.disabled = true;
+    });
+
+    if(selected === q.answer){
+
+        selectedButton.classList.add("correct");
+
+        score++;
+
+        scoreElement.textContent =
+            "Score: " + score;
+
+    }else{
+
+        selectedButton.classList.add("wrong");
+
+        allOptions[q.answer].classList.add("correct");
+    }
+
+    explanationElement.innerHTML =
+        "<strong>💡 Explanation:</strong> " +
+        q.explanation;
+
+    explanationElement.style.display = "block";
+
+    if(currentQuestion < questions.length - 1){
+
+        nextButton.style.display = "inline-block";
+
+    }else{
+
+        nextButton.textContent = "View Result →";
+        nextButton.style.display = "inline-block";
+    }
+}
+
+function nextQuestion(){
+
+    if(currentQuestion < questions.length - 1){
+
+        currentQuestion++;
+
+        loadQuestion();
+
+    }else{
+
+        showResult();
+    }
+}
+
+function showResult(){
+
+    document.getElementById("quizArea").style.display = "none";
+
+    document.getElementById("result").style.display = "block";
+
+    document.getElementById("finalScore").textContent =
+        score + " / " + questions.length;
+
+    const percentage =
+        Math.round((score / questions.length) * 100);
+
+    document.getElementById("percentage").textContent =
+        "Your Score: " + percentage + "%";
+}
+
+function restartQuiz(){
+
+    currentQuestion = 0;
+    score = 0;
+
+    document.getElementById("result").style.display = "none";
+
+    document.getElementById("quizArea").style.display = "block";
+
+    nextButton.textContent = "Next Question →";
+
+    loadQuestion();
+}
+
+loadQuestion();
+
+</script>
+
+</body>
+</html>
