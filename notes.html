@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BHMS Notes | BHMS Student Hub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 21px;
+        }
+
+        .home-btn {
+            background: white;
+            color: #1e40af;
+            text-decoration: none;
+            padding: 9px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #dbeafe, #eff6ff);
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .hero h2 {
+            font-size: 34px;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #475569;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 27px;
+            color: #1e3a8a;
+            margin-bottom: 25px;
+        }
+
+        .year-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .year-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .year-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .year-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .year-card h3 {
+            color: #1d4ed8;
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        .year-card p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .view-btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .coming-soon {
+            margin-top: 45px;
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+        }
+
+        .coming-soon h2 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+
+        .coming-soon p {
+            color: #64748b;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .features {
+            margin-top: 45px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .feature-card h3 {
+            color: #1e40af;
+            margin-bottom: 7px;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .cta {
+            margin-top: 45px;
+            background: linear-gradient(135deg, #1e40af, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+            border-radius: 16px;
+        }
+
+        .cta h2 {
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            margin-bottom: 20px;
+        }
+
+        .cta a {
+            display: inline-block;
+            background: white;
+            color: #1e40af;
+            padding: 11px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 40px;
+            background: #0f172a;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 18px;
+            }
+
+            .home-btn {
+                padding: 8px 11px;
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 35px 15px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 28px 15px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .year-grid,
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>BHMS Student Hub</h1>
+    <a href="index.html" class="home-btn">← Home</a>
+</header>
+
+
+<section class="hero">
+    <h2>📚 BHMS Notes</h2>
+    <p>Subject-wise Study Notes for Every BHMS Year</p>
+</section>
+
+
+<div class="container">
+
+    <h2 class="section-title">📖 Select Your Year</h2>
+
+    <div class="year-grid">
+
+        <div class="year-card">
+            <div class="year-icon">1️⃣</div>
+
+            <h3>1st Year BHMS</h3>
+
+            <p>
+                Subject-wise notes for your first year
+                BHMS preparation.
+            </p>
+
+            <a href="first-year.html" class="view-btn">
+                View 1st Year
+            </a>
+        </div>
+
+
+        <div class="year-card">
+            <div class="year-icon">2️⃣</div>
+
+            <h3>2nd Year BHMS</h3>
+
+            <p>
+                Important study material and notes
+                for second year preparation.
+            </p>
+
+            <a href="second-year.html" class="view-btn">
+                View 2nd Year
+            </a>
+        </div>
+
+
+        <div class="year-card">
+            <div class="year-icon">3️⃣</div>
+
+            <h3>3rd Year BHMS</h3>
+
+            <p>
+                Study notes and revision material
+                for third year BHMS.
+            </p>
+
+            <a href="third-year.html" class="view-btn">
+                View 3rd Year
+            </a>
+        </div>
+
+
+        <div class="year-card">
+            <div class="year-icon">4️⃣</div>
+
+            <h3>Final Year BHMS</h3>
+
+            <p>
+                Important notes and preparation
+                resources for final year.
+            </p>
+
+            <a href="final-year.html" class="view-btn">
+                View Final Year
+            </a>
+        </div>
+
+
+        <div class="year-card">
+            <div class="year-icon">🏥</div>
+
+            <h3>Internship</h3>
+
+            <p>
+                Clinical learning and practical
+                internship resources.
+            </p>
+
+            <a href="internship.html" class="view-btn">
+                View Internship
+            </a>
+        </div>
+
+    </div>
+
+
+    <section class="coming-soon">
+
+        <h2>🚧 Subject-wise Notes Coming Soon</h2>
+
+        <p>
+            We are preparing organized BHMS study material,
+            subject-wise notes, revision material and useful
+            resources for students.
+        </p>
+
+    </section>
+
+
+    <section class="features">
+
+        <h2 class="section-title">✨ What You Will Find Here</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>📚 Subject-wise Notes</h3>
+                <p>
+                    Notes organized according to subjects
+                    to make studying easier.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📝 Exam Notes</h3>
+                <p>
+                    Important concepts and exam-focused
+                    revision material.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>⚡ Quick Revision</h3>
+                <p>
+                    Short and useful revision material
+                    for quick preparation.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎯 Important Topics</h3>
+                <p>
+                    Important study areas to help students
+                    organize their preparation.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="cta">
+
+        <h2>🚀 Study Smarter with BHMS Student Hub</h2>
+
+        <p>
+            Your BHMS study resources, organized in one place.
+        </p>
+
+        <a href="index.html">Go to Home</a>
+
+    </section>
+
+</div>
+
+
+<footer>
+    <p>© 2026 BHMS Student Hub</p>
+    <p>Study Smart • Prepare Better • Achieve More</p>
+</footer>
+
+</body>
+</html>
