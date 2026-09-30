@@ -28,13 +28,12 @@ header{
 }
 
 header h1{
-    font-size:26px;
+    font-size:27px;
     margin-bottom:7px;
 }
 
 header p{
     font-size:14px;
-    opacity:0.95;
 }
 
 .container{
@@ -45,8 +44,8 @@ header p{
 
 .info-box{
     background:white;
-    border-radius:15px;
-    padding:18px;
+    border-radius:16px;
+    padding:20px;
     margin-bottom:18px;
     box-shadow:0 4px 15px rgba(0,0,0,0.07);
     text-align:center;
@@ -55,24 +54,23 @@ header p{
 .info-box h2{
     color:#0d47a1;
     margin-bottom:8px;
-    font-size:21px;
 }
 
 .info-box p{
-    font-size:14px;
-    line-height:1.6;
     color:#555;
+    line-height:1.6;
+    font-size:14px;
 }
 
 .badge{
     display:inline-block;
-    margin-top:10px;
+    margin-top:12px;
+    padding:8px 14px;
+    border-radius:20px;
     background:#e3f2fd;
     color:#0d47a1;
-    padding:7px 13px;
-    border-radius:20px;
-    font-size:13px;
     font-weight:bold;
+    font-size:13px;
 }
 
 .quiz-box{
@@ -86,42 +84,42 @@ header p{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:10px;
-    margin-bottom:18px;
     flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:20px;
 }
 
 .progress{
-    color:#0d47a1;
     font-weight:bold;
+    color:#0d47a1;
 }
 
 .score{
     background:#e8f5e9;
     color:#2e7d32;
-    padding:7px 12px;
+    padding:8px 13px;
     border-radius:20px;
-    font-size:14px;
     font-weight:bold;
 }
 
 .question{
     font-size:19px;
-    line-height:1.5;
     font-weight:bold;
+    line-height:1.5;
     margin-bottom:20px;
 }
 
 .option{
+    display:block;
     width:100%;
-    text-align:left;
     padding:14px 15px;
     margin-bottom:12px;
+    background:white;
     border:2px solid #e0e6ef;
-    background:#fff;
     border-radius:11px;
-    cursor:pointer;
+    text-align:left;
     font-size:15px;
+    cursor:pointer;
     transition:0.2s;
 }
 
@@ -150,31 +148,26 @@ header p{
 
 .explanation{
     display:none;
+    margin-top:15px;
+    padding:14px;
     background:#f5f7fa;
     border-left:4px solid #1976d2;
-    padding:13px;
-    margin-top:15px;
     border-radius:8px;
-    font-size:14px;
     line-height:1.6;
-}
-
-.next-btn,
-.restart-btn,
-.back-btn{
-    border:none;
-    padding:13px 22px;
-    border-radius:10px;
-    font-size:15px;
-    font-weight:bold;
-    cursor:pointer;
+    font-size:14px;
 }
 
 .next-btn{
+    display:none;
+    margin-top:18px;
+    padding:13px 23px;
+    border:none;
+    border-radius:10px;
     background:#1976d2;
     color:white;
-    margin-top:18px;
-    display:none;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 .next-btn:hover{
@@ -189,25 +182,56 @@ header p{
 
 .result h2{
     color:#0d47a1;
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
 .final-score{
-    font-size:32px;
+    font-size:36px;
     font-weight:bold;
     color:#1976d2;
     margin:15px 0;
 }
 
-.result p{
+.result-stat{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin:20px 0;
+}
+
+.stat{
+    background:#f5f7fa;
+    padding:15px 8px;
+    border-radius:12px;
+}
+
+.stat strong{
+    display:block;
+    font-size:21px;
+    color:#0d47a1;
+    margin-bottom:5px;
+}
+
+.stat span{
+    font-size:12px;
+    color:#666;
+}
+
+.result-message{
+    margin:15px 0;
+    font-size:15px;
     line-height:1.6;
-    color:#555;
 }
 
 .restart-btn{
+    border:none;
+    padding:13px 22px;
+    border-radius:10px;
     background:#1976d2;
     color:white;
-    margin-top:18px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 .bottom{
@@ -216,26 +240,26 @@ header p{
 }
 
 .back-btn{
+    display:inline-block;
+    text-decoration:none;
     background:#37474f;
     color:white;
-    text-decoration:none;
-    display:inline-block;
-}
-
-.back-btn:hover{
-    background:#263238;
+    padding:13px 22px;
+    border-radius:10px;
+    font-weight:bold;
 }
 
 footer{
     text-align:center;
-    padding:20px;
     color:#777;
+    padding:20px;
     font-size:13px;
 }
 
 @media(max-width:600px){
+
     header h1{
-        font-size:22px;
+        font-size:23px;
     }
 
     .quiz-box{
@@ -249,6 +273,10 @@ footer{
     .option{
         font-size:14px;
         padding:13px;
+    }
+
+    .result-stat{
+        grid-template-columns:1fr;
     }
 }
 </style>
@@ -265,13 +293,15 @@ footer{
 
     <div class="info-box">
         <h2>📚 Upper Limb</h2>
+
         <p>
-            Practice important Upper Limb questions based on
-            BHMS University / MUHS previous-year question themes.
+            100 important MCQs based on BHMS University
+            previous-year question themes and university-pattern
+            examination topics.
         </p>
 
         <span class="badge">
-            🎓 University PYQ Based
+            🎓 University PYQ / Pattern Based • 100 MCQs
         </span>
     </div>
 
@@ -280,13 +310,15 @@ footer{
         <div id="quizArea">
 
             <div class="quiz-top">
+
                 <div class="progress" id="progress">
-                    Question 1 of 20
+                    Question 1 of 100
                 </div>
 
                 <div class="score" id="score">
                     Score: 0
                 </div>
+
             </div>
 
             <div class="question" id="question"></div>
@@ -301,20 +333,37 @@ footer{
 
         </div>
 
+
+        <!-- FINAL RESULT -->
+
         <div class="result" id="result">
 
             <h2>🎉 Quiz Completed!</h2>
 
             <div class="final-score" id="finalScore">
-                0 / 20
+                0 / 100
             </div>
 
-            <p id="percentage"></p>
+            <div class="result-stat">
 
-            <p>
-                Keep practicing Upper Limb anatomy and revise the
-                frequently asked university topics.
-            </p>
+                <div class="stat">
+                    <strong id="correctCount">0</strong>
+                    <span>Correct Answers</span>
+                </div>
+
+                <div class="stat">
+                    <strong id="wrongCount">0</strong>
+                    <span>Wrong Answers</span>
+                </div>
+
+                <div class="stat">
+                    <strong id="attemptedCount">100</strong>
+                    <span>Attempted</span>
+                </div>
+
+            </div>
+
+            <p class="result-message" id="percentage"></p>
 
             <button class="restart-btn" onclick="restartQuiz()">
                 🔄 Restart Quiz
@@ -324,10 +373,13 @@ footer{
 
     </div>
 
+
     <div class="bottom">
+
         <a href="anatomy-mcq.html" class="back-btn">
             ← Back to Anatomy Chapters
         </a>
+
     </div>
 
 </div>
@@ -341,244 +393,923 @@ footer{
 
 const questions = [
 
+/* =========================
+   BRACHIAL PLEXUS
+========================= */
+
 {
-    question:"The roots of the brachial plexus are formed by which spinal nerves?",
-    options:[
-        "C1–C4",
-        "C5–T1",
-        "T1–T5",
-        "C4–T2"
-    ],
-    answer:1,
-    explanation:"The brachial plexus is formed by the anterior rami of C5, C6, C7, C8 and T1 spinal nerves."
+q:"The brachial plexus is formed by the anterior rami of:",
+o:["C1–C4","C5–T1","T1–T5","C4–T2"],
+a:1,
+e:"The brachial plexus is formed by the anterior rami of C5, C6, C7, C8 and T1."
 },
 
 {
-    question:"Which of the following is NOT a branch of the lateral cord of the brachial plexus?",
-    options:[
-        "Lateral pectoral nerve",
-        "Musculocutaneous nerve",
-        "Lateral root of median nerve",
-        "Radial nerve"
-    ],
-    answer:3,
-    explanation:"The radial nerve is a terminal branch of the posterior cord, not the lateral cord."
+q:"Which part of the brachial plexus is formed first?",
+o:["Cords","Divisions","Trunks","Terminal branches"],
+a:2,
+e:"The roots of the brachial plexus unite to form three trunks: upper, middle and lower."
 },
 
 {
-    question:"The medial boundary of the cubital fossa is formed by:",
-    options:[
-        "Brachioradialis",
-        "Pronator teres",
-        "Brachialis",
-        "Supinator"
-    ],
-    answer:1,
-    explanation:"The medial boundary of the cubital fossa is formed by the pronator teres muscle."
+q:"The upper trunk of the brachial plexus is formed by:",
+o:["C5 and C6","C6 and C7","C7 and C8","C8 and T1"],
+a:0,
+e:"The upper trunk is formed by the union of C5 and C6 roots."
 },
 
 {
-    question:"Which nerve is commonly affected in wrist drop?",
-    options:[
-        "Median nerve",
-        "Ulnar nerve",
-        "Radial nerve",
-        "Musculocutaneous nerve"
-    ],
-    answer:2,
-    explanation:"Radial nerve injury can cause loss of wrist and finger extension, producing wrist drop."
+q:"The middle trunk of the brachial plexus is a continuation of:",
+o:["C5 root","C6 root","C7 root","C8 root"],
+a:2,
+e:"The C7 root continues as the middle trunk."
 },
 
 {
-    question:"Which muscle is supplied by the musculocutaneous nerve?",
-    options:[
-        "Biceps brachii",
-        "Triceps brachii",
-        "Pronator teres",
-        "Flexor carpi ulnaris"
-    ],
-    answer:0,
-    explanation:"The musculocutaneous nerve supplies the muscles of the anterior compartment of the arm, including biceps brachii."
+q:"The lower trunk of the brachial plexus is formed by:",
+o:["C5–C6","C6–C7","C7–C8","C8–T1"],
+a:3,
+e:"The lower trunk is formed by C8 and T1."
 },
 
 {
-    question:"Which nerve passes through the carpal tunnel?",
-    options:[
-        "Ulnar nerve",
-        "Radial nerve",
-        "Median nerve",
-        "Musculocutaneous nerve"
-    ],
-    answer:2,
-    explanation:"The median nerve passes deep to the flexor retinaculum through the carpal tunnel."
+q:"The lateral cord of brachial plexus is formed by:",
+o:["Anterior divisions of upper and middle trunks","Posterior divisions of all trunks","Anterior division of lower trunk","Posterior division of upper trunk"],
+a:0,
+e:"The lateral cord is formed by the anterior divisions of the upper and middle trunks."
 },
 
 {
-    question:"The anatomical snuff box is mainly related to which artery?",
-    options:[
-        "Ulnar artery",
-        "Radial artery",
-        "Brachial artery",
-        "Axillary artery"
-    ],
-    answer:1,
-    explanation:"The radial artery passes through the anatomical snuff box."
+q:"The posterior cord is formed by:",
+o:["Anterior divisions","Posterior divisions of all three trunks","Only upper trunk","Only lower trunk"],
+a:1,
+e:"The posterior cord is formed by the union of the posterior divisions of all three trunks."
 },
 
 {
-    question:"Which muscle is the chief abductor of the arm from 15° to 90°?",
-    options:[
-        "Supraspinatus",
-        "Deltoid",
-        "Teres major",
-        "Pectoralis major"
-    ],
-    answer:1,
-    explanation:"Deltoid is the main muscle responsible for abduction of the arm from approximately 15° to 90°."
+q:"The medial cord is a continuation of the anterior division of:",
+o:["Upper trunk","Middle trunk","Lower trunk","All trunks"],
+a:2,
+e:"The medial cord is the continuation of the anterior division of the lower trunk."
 },
 
 {
-    question:"The first 15° of abduction of the arm is mainly initiated by:",
-    options:[
-        "Deltoid",
-        "Supraspinatus",
-        "Infraspinatus",
-        "Teres minor"
-    ],
-    answer:1,
-    explanation:"Supraspinatus initiates abduction of the arm for approximately the first 15°."
+q:"Which is a branch of the upper trunk?",
+o:["Suprascapular nerve","Ulnar nerve","Median nerve","Radial nerve"],
+a:0,
+e:"The suprascapular nerve is a branch of the upper trunk."
 },
 
 {
-    question:"Which muscle is NOT a part of the rotator cuff?",
-    options:[
-        "Supraspinatus",
-        "Infraspinatus",
-        "Teres minor",
-        "Teres major"
-    ],
-    answer:3,
-    explanation:"Rotator cuff muscles are Supraspinatus, Infraspinatus, Teres minor and Subscapularis. Teres major is not part of the rotator cuff."
+q:"The musculocutaneous nerve is a terminal branch of:",
+o:["Medial cord","Lateral cord","Posterior cord","Lower trunk"],
+a:1,
+e:"The musculocutaneous nerve arises from the lateral cord."
 },
 
 {
-    question:"Which nerve supplies the deltoid muscle?",
-    options:[
-        "Radial nerve",
-        "Axillary nerve",
-        "Median nerve",
-        "Ulnar nerve"
-    ],
-    answer:1,
-    explanation:"The deltoid muscle is supplied by the axillary nerve."
+q:"The ulnar nerve is a terminal branch of:",
+o:["Lateral cord","Posterior cord","Medial cord","Upper trunk"],
+a:2,
+e:"The ulnar nerve arises from the medial cord."
 },
 
 {
-    question:"The axillary nerve winds around the surgical neck of which bone?",
-    options:[
-        "Radius",
-        "Ulna",
-        "Humerus",
-        "Scapula"
-    ],
-    answer:2,
-    explanation:"The axillary nerve winds around the surgical neck of the humerus with the posterior circumflex humeral vessels."
+q:"The radial nerve arises from the:",
+o:["Lateral cord","Medial cord","Posterior cord","Upper trunk"],
+a:2,
+e:"The radial nerve is a terminal branch of the posterior cord."
 },
 
 {
-    question:"Which artery is the continuation of the axillary artery beyond the lower border of teres major?",
-    options:[
-        "Radial artery",
-        "Ulnar artery",
-        "Brachial artery",
-        "Subclavian artery"
-    ],
-    answer:2,
-    explanation:"The axillary artery continues as the brachial artery at the lower border of teres major."
+q:"The axillary nerve arises from the:",
+o:["Posterior cord","Lateral cord","Medial cord","Lower trunk"],
+a:0,
+e:"The axillary nerve is a terminal branch of the posterior cord."
 },
 
 {
-    question:"Which artery is a terminal branch of the brachial artery?",
-    options:[
-        "Radial artery",
-        "Axillary artery",
-        "Subclavian artery",
-        "Thoracoacromial artery"
-    ],
-    answer:0,
-    explanation:"The brachial artery terminates by dividing into the radial and ulnar arteries."
+q:"The median nerve is formed by:",
+o:["Two roots from lateral and medial cords","Posterior cord only","Medial cord only","Upper trunk"],
+a:0,
+e:"The median nerve is formed by lateral and medial roots from the lateral and medial cords."
 },
 
 {
-    question:"Which nerve lies behind the medial epicondyle of the humerus?",
-    options:[
-        "Median nerve",
-        "Radial nerve",
-        "Ulnar nerve",
-        "Axillary nerve"
-    ],
-    answer:2,
-    explanation:"The ulnar nerve passes behind the medial epicondyle and is commonly called the 'funny bone' nerve."
+q:"Erb's palsy is commonly associated with injury to:",
+o:["Upper trunk","Middle trunk","Lower trunk","Medial cord"],
+a:0,
+e:"Erb's palsy classically results from injury to the upper trunk, especially C5–C6."
+},
+
+/* =========================
+   AXILLA
+========================= */
+
+{
+q:"The apex of the axilla is also called:",
+o:["Axillary inlet","Axillary outlet","Cubital fossa","Deltopectoral triangle"],
+a:0,
+e:"The apex of the axilla is the cervico-axillary canal or axillary inlet."
 },
 
 {
-    question:"Which carpal bone is located in the proximal row on the lateral side?",
-    options:[
-        "Scaphoid",
-        "Pisiform",
-        "Hamate",
-        "Capitate"
-    ],
-    answer:0,
-    explanation:"The scaphoid is the lateral-most carpal bone in the proximal row."
+q:"The anterior wall of axilla is mainly formed by:",
+o:["Subscapularis","Pectoralis major and minor","Teres major","Latissimus dorsi"],
+a:1,
+e:"Pectoralis major and pectoralis minor form the principal anterior wall."
 },
 
 {
-    question:"Colles' fracture commonly involves the distal end of which bone?",
-    options:[
-        "Ulna",
-        "Radius",
-        "Humerus",
-        "Scaphoid"
-    ],
-    answer:1,
-    explanation:"Colles' fracture is a fracture of the distal radius, classically associated with a fall on an outstretched hand."
+q:"The posterior wall of axilla includes:",
+o:["Subscapularis, teres major and latissimus dorsi","Pectoralis major only","Biceps and coracobrachialis","Deltoid only"],
+a:0,
+e:"The posterior wall is formed mainly by subscapularis, teres major and latissimus dorsi."
 },
 
 {
-    question:"Which nerve is the largest branch of the posterior cord of the brachial plexus?",
-    options:[
-        "Axillary nerve",
-        "Radial nerve",
-        "Median nerve",
-        "Ulnar nerve"
-    ],
-    answer:1,
-    explanation:"The radial nerve is the largest terminal branch of the posterior cord."
+q:"The medial wall of axilla is mainly formed by:",
+o:["Humerus","Serratus anterior and thoracic wall","Pectoralis major","Subscapularis"],
+a:1,
+e:"The medial wall is formed by the thoracic wall and serratus anterior."
 },
 
 {
-    question:"The biceps brachii muscle is supplied by which nerve?",
-    options:[
-        "Radial nerve",
-        "Ulnar nerve",
-        "Musculocutaneous nerve",
-        "Median nerve"
-    ],
-    answer:2,
-    explanation:"Biceps brachii is supplied by the musculocutaneous nerve."
+q:"The lateral wall of axilla is formed mainly by:",
+o:["Intertubercular sulcus of humerus","Scapula","Clavicle","Sternum"],
+a:0,
+e:"The lateral wall is narrow and is related to the intertubercular sulcus of the humerus."
 },
 
 {
-    question:"Which structure passes deep to the flexor retinaculum at the wrist?",
-    options:[
-        "Median nerve",
-        "Radial artery",
-        "Cephalic vein",
-        "Ulnar nerve"
-    ],
-    answer:0,
-    explanation:"The median nerve passes through the carpal tunnel deep to the flexor retinaculum."
+q:"The axillary artery is a continuation of the:",
+o:["Brachial artery","Subclavian artery","Radial artery","Ulnar artery"],
+a:1,
+e:"The axillary artery begins as the continuation of the subclavian artery at the lateral border of the first rib."
+},
+
+{
+q:"The axillary artery becomes brachial artery at the:",
+o:["Upper border of teres major","Lower border of teres major","Lower border of pectoralis minor","Surgical neck of humerus"],
+a:1,
+e:"At the lower border of teres major, the axillary artery continues as the brachial artery."
+},
+
+{
+q:"Pectoralis minor divides the axillary artery into:",
+o:["Two parts","Three parts","Four parts","Five parts"],
+a:1,
+e:"Pectoralis minor divides the axillary artery into three parts."
+},
+
+{
+q:"The artery accompanying the radial nerve in the radial groove is:",
+o:["Deep brachial artery","Superior ulnar collateral artery","Radial artery","Posterior circumflex humeral artery"],
+a:0,
+e:"The profunda brachii or deep brachial artery accompanies the radial nerve in the radial groove."
+},
+
+{
+q:"The main lymph nodes of the axilla are clinically important for drainage from:",
+o:["Upper limb and breast","Lower limb only","Brain","Abdomen only"],
+a:0,
+e:"Axillary lymph nodes receive lymph from the upper limb and much of the breast."
+},
+
+/* =========================
+   ARM
+========================= */
+
+{
+q:"The main muscle of the anterior compartment of arm is:",
+o:["Triceps","Biceps brachii","Anconeus","Deltoid"],
+a:1,
+e:"Biceps brachii is one of the major muscles of the anterior compartment."
+},
+
+{
+q:"Biceps brachii is supplied by:",
+o:["Radial nerve","Ulnar nerve","Musculocutaneous nerve","Median nerve"],
+a:2,
+e:"Biceps brachii is supplied by the musculocutaneous nerve."
+},
+
+{
+q:"The chief action of biceps brachii is:",
+o:["Extension of elbow","Supination of forearm","Adduction of wrist","Extension of wrist"],
+a:1,
+e:"Biceps brachii is a powerful supinator and also flexes the elbow."
+},
+
+{
+q:"The long head of biceps brachii originates from:",
+o:["Supraglenoid tubercle","Infraglenoid tubercle","Coracoid process","Acromion"],
+a:0,
+e:"The long head arises from the supraglenoid tubercle of scapula."
+},
+
+{
+q:"The short head of biceps brachii originates from:",
+o:["Acromion","Coracoid process","Supraglenoid tubercle","Spine of scapula"],
+a:1,
+e:"The short head originates from the coracoid process."
+},
+
+{
+q:"The triceps brachii is the chief extensor of:",
+o:["Elbow","Wrist","Shoulder only","Fingers"],
+a:0,
+e:"Triceps brachii is the main extensor of the elbow joint."
+},
+
+{
+q:"The nerve supplying triceps brachii is:",
+o:["Median nerve","Radial nerve","Ulnar nerve","Axillary nerve"],
+a:1,
+e:"Triceps brachii is supplied by the radial nerve."
+},
+
+{
+q:"The radial nerve runs in the:",
+o:["Bicipital groove","Radial groove of humerus","Intertubercular groove","Cubital tunnel"],
+a:1,
+e:"The radial nerve accompanies the profunda brachii artery in the radial groove."
+},
+
+{
+q:"The brachial artery is a continuation of the:",
+o:["Subclavian artery","Axillary artery","Radial artery","Ulnar artery"],
+a:1,
+e:"The axillary artery continues as the brachial artery at the lower border of teres major."
+},
+
+{
+q:"The brachial artery usually terminates by dividing into:",
+o:["Radial and ulnar arteries","Axillary and radial arteries","Ulnar and axillary arteries","Anterior and posterior interosseous arteries"],
+a:0,
+e:"The brachial artery normally divides into radial and ulnar arteries in the cubital fossa."
+},
+
+/* =========================
+   CUBITAL FOSSA
+========================= */
+
+{
+q:"The lateral boundary of cubital fossa is formed by:",
+o:["Pronator teres","Brachioradialis","Brachialis","Supinator"],
+a:1,
+e:"Brachioradialis forms the lateral boundary."
+},
+
+{
+q:"The medial boundary of cubital fossa is formed by:",
+o:["Brachioradialis","Pronator teres","Biceps","Supinator"],
+a:1,
+e:"Pronator teres forms the medial boundary."
+},
+
+{
+q:"The floor of cubital fossa is mainly formed by:",
+o:["Brachialis and supinator","Biceps and triceps","Pronator teres only","Brachioradialis"],
+a:0,
+e:"The floor is formed mainly by brachialis and supinator."
+},
+
+{
+q:"The roof of cubital fossa includes:",
+o:["Skin, fascia and bicipital aponeurosis","Only muscle","Only bone","Joint capsule only"],
+a:0,
+e:"The roof consists of skin, superficial fascia, deep fascia and bicipital aponeurosis."
+},
+
+{
+q:"The brachial artery in the cubital fossa lies generally:",
+o:["Lateral to biceps tendon","Medial to biceps tendon","Behind triceps","Inside carpal tunnel"],
+a:1,
+e:"The brachial artery lies medial to the biceps tendon."
+},
+
+{
+q:"The median nerve in cubital fossa lies:",
+o:["Medial to brachial artery","Lateral to biceps","Inside radial groove","Behind medial epicondyle"],
+a:0,
+e:"The median nerve is medial to the brachial artery in the cubital fossa."
+},
+
+{
+q:"The tendon commonly found in the cubital fossa is:",
+o:["Biceps tendon","Triceps tendon","Palmaris longus tendon","Flexor carpi ulnaris tendon"],
+a:0,
+e:"The biceps tendon is an important content of the cubital fossa."
+},
+
+{
+q:"The common arrangement in the cubital fossa from lateral to medial is:",
+o:["Nerve-Artery-Tendon","Tendon-Artery-Nerve","Artery-Nerve-Tendon","Nerve-Tendon-Artery"],
+a:1,
+e:"A common arrangement is biceps Tendon, brachial Artery and median Nerve — TAN."
+},
+
+{
+q:"The bicipital aponeurosis is related to:",
+o:["Biceps brachii","Triceps brachii","Deltoid","Pronator quadratus"],
+a:0,
+e:"The bicipital aponeurosis is an expansion from the biceps tendon."
+},
+
+{
+q:"The elbow joint is mainly a:",
+o:["Ball and socket joint","Hinge synovial joint","Pivot joint","Saddle joint"],
+a:1,
+e:"The humeroulnar and humeroradial components permit mainly flexion and extension."
+},
+
+/* =========================
+   SHOULDER + ROTATOR CUFF
+========================= */
+
+{
+q:"The shoulder joint is a:",
+o:["Hinge joint","Ball and socket joint","Pivot joint","Plane joint"],
+a:1,
+e:"The glenohumeral joint is a synovial ball and socket joint."
+},
+
+{
+q:"The head of humerus articulates with the:",
+o:["Acetabulum","Glenoid cavity","Olecranon","Radial notch"],
+a:1,
+e:"The head of humerus articulates with the glenoid cavity of scapula."
+},
+
+{
+q:"The shoulder joint is most commonly dislocated in which direction?",
+o:["Superior","Inferior/anterior-inferior","Posterior only","Medial"],
+a:1,
+e:"Anterior-inferior dislocation is the common clinical pattern."
+},
+
+{
+q:"The rotator cuff consists of:",
+o:["SITS muscles","Biceps and triceps","Pectoralis muscles","Forearm flexors"],
+a:0,
+e:"Rotator cuff = Supraspinatus, Infraspinatus, Teres minor and Subscapularis."
+},
+
+{
+q:"Which muscle initiates abduction of arm?",
+o:["Deltoid","Supraspinatus","Teres major","Pectoralis major"],
+a:1,
+e:"Supraspinatus initiates the first part of abduction."
+},
+
+{
+q:"The deltoid mainly abducts the arm from approximately:",
+o:["0–10°","15–90°","90–180°","180–270°"],
+a:1,
+e:"Deltoid is the chief abductor from approximately 15° to 90°."
+},
+
+{
+q:"The deltoid muscle is supplied by:",
+o:["Axillary nerve","Radial nerve","Median nerve","Ulnar nerve"],
+a:0,
+e:"The axillary nerve supplies deltoid."
+},
+
+{
+q:"The axillary nerve winds around the:",
+o:["Anatomical neck of humerus","Surgical neck of humerus","Medial epicondyle","Radial head"],
+a:1,
+e:"The axillary nerve winds around the surgical neck of humerus."
+},
+
+{
+q:"Which is NOT a rotator cuff muscle?",
+o:["Supraspinatus","Infraspinatus","Teres minor","Teres major"],
+a:3,
+e:"Teres major is not a rotator cuff muscle."
+},
+
+{
+q:"The subscapularis muscle inserts mainly on the:",
+o:["Lesser tubercle of humerus","Greater tubercle","Olecranon","Acromion"],
+a:0,
+e:"Subscapularis inserts on the lesser tubercle of humerus."
+},
+
+/* =========================
+   NERVES
+========================= */
+
+{
+q:"The median nerve is formed by roots from:",
+o:["Lateral and medial cords","Posterior cord only","Upper trunk only","Medial cord only"],
+a:0,
+e:"Median nerve has lateral and medial roots from the corresponding cords."
+},
+
+{
+q:"The median nerve is mainly associated with muscles of:",
+o:["Anterior forearm","Posterior arm","Posterior forearm only","Shoulder only"],
+a:0,
+e:"Median nerve supplies most muscles of the anterior compartment of forearm."
+},
+
+{
+q:"The ulnar nerve passes behind the:",
+o:["Lateral epicondyle","Medial epicondyle","Radial head","Olecranon only"],
+a:1,
+e:"The ulnar nerve passes behind the medial epicondyle."
+},
+
+{
+q:"The radial nerve supplies the muscles of:",
+o:["Posterior compartment of arm and forearm","Anterior arm only","Thenar muscles only","Medial forearm only"],
+a:0,
+e:"Radial nerve is the major motor nerve of the extensor compartments."
+},
+
+{
+q:"The musculocutaneous nerve supplies:",
+o:["Anterior compartment of arm","Posterior compartment of arm","Intrinsic hand muscles","Thenar muscles"],
+a:0,
+e:"Musculocutaneous nerve supplies coracobrachialis, biceps and brachialis."
+},
+
+{
+q:"The axillary nerve supplies:",
+o:["Deltoid and teres minor","Biceps and brachialis","Triceps and anconeus","Pronator teres"],
+a:0,
+e:"Axillary nerve supplies deltoid and teres minor."
+},
+
+{
+q:"Wrist drop is classically associated with injury to:",
+o:["Median nerve","Radial nerve","Ulnar nerve","Axillary nerve"],
+a:1,
+e:"Radial nerve injury can produce wrist drop due to loss of wrist extension."
+},
+
+{
+q:"Ape thumb deformity is associated mainly with injury to:",
+o:["Median nerve","Ulnar nerve","Radial nerve","Axillary nerve"],
+a:0,
+e:"Median nerve injury can affect thenar muscles and produce ape thumb."
+},
+
+{
+q:"Claw hand is classically associated with:",
+o:["Ulnar nerve injury","Axillary nerve injury","Radial nerve injury","Musculocutaneous injury"],
+a:0,
+e:"Ulnar nerve injury can produce clawing of the ring and little fingers."
+},
+
+{
+q:"The sensory distribution of the ulnar nerve includes mainly the:",
+o:["Little finger and medial half of ring finger","Thumb only","Index finger only","Lateral forearm"],
+a:0,
+e:"Ulnar nerve supplies sensation to the little finger and adjacent half of the ring finger."
+},
+
+{
+q:"The median nerve commonly supplies sensation to the:",
+o:["Palmar lateral 3½ digits","Little finger only","Medial forearm","Posterior arm"],
+a:0,
+e:"Median nerve supplies most of the palmar surface of the lateral 3½ digits."
+},
+
+{
+q:"The radial nerve supplies sensation to a major area of the:",
+o:["Dorsolateral hand","Medial palm only","Little finger only","Thenar eminence only"],
+a:0,
+e:"The superficial radial nerve supplies dorsolateral hand sensation."
+},
+
+{
+q:"The ulnar nerve in the hand passes superficial to the:",
+o:["Flexor retinaculum","Extensor retinaculum","Bicipital aponeurosis","Annular ligament"],
+a:0,
+e:"Ulnar nerve passes through Guyon's canal superficial to the flexor retinaculum."
+},
+
+{
+q:"The median nerve passes through the:",
+o:["Carpal tunnel","Guyon's canal","Radial groove","Cubital tunnel only"],
+a:0,
+e:"Median nerve passes through the carpal tunnel."
+},
+
+{
+q:"Saturday night palsy is commonly related to compression of:",
+o:["Radial nerve","Median nerve","Ulnar nerve","Axillary nerve"],
+a:0,
+e:"Prolonged compression of the radial nerve can produce Saturday night palsy."
+},
+
+/* =========================
+   FOREARM
+========================= */
+
+{
+q:"Pronator teres is supplied by:",
+o:["Median nerve","Radial nerve","Ulnar nerve","Axillary nerve"],
+a:0,
+e:"Pronator teres is supplied by the median nerve."
+},
+
+{
+q:"Flexor carpi ulnaris is supplied by:",
+o:["Median nerve","Radial nerve","Ulnar nerve","Musculocutaneous nerve"],
+a:2,
+e:"Flexor carpi ulnaris is supplied by the ulnar nerve."
+},
+
+{
+q:"The main nerve of the posterior compartment of forearm is:",
+o:["Radial nerve","Median nerve","Ulnar nerve","Axillary nerve"],
+a:0,
+e:"Radial nerve and its branches supply the extensor compartment."
+},
+
+{
+q:"The anterior interosseous nerve is a branch of:",
+o:["Median nerve","Ulnar nerve","Radial nerve","Axillary nerve"],
+a:0,
+e:"Anterior interosseous nerve is a motor branch of the median nerve."
+},
+
+{
+q:"The posterior interosseous nerve is derived from:",
+o:["Radial nerve","Median nerve","Ulnar nerve","Axillary nerve"],
+a:0,
+e:"Posterior interosseous nerve is the deep branch of radial nerve after it passes through supinator."
+},
+
+{
+q:"The radial artery is a terminal branch of:",
+o:["Brachial artery","Axillary artery","Subclavian artery","Ulnar artery"],
+a:0,
+e:"The brachial artery divides into radial and ulnar arteries."
+},
+
+{
+q:"The ulnar artery is a terminal branch of:",
+o:["Brachial artery","Axillary artery","Radial artery","Subclavian artery"],
+a:0,
+e:"The ulnar artery is one of the two terminal branches of brachial artery."
+},
+
+{
+q:"The radial artery is commonly palpated at the:",
+o:["Wrist","Medial epicondyle","Axilla","Olecranon"],
+a:0,
+e:"Radial pulse is commonly palpated at the wrist."
+},
+
+{
+q:"The ulnar artery mainly contributes to the:",
+o:["Superficial palmar arch","Dorsal carpal arch only","Radial groove","Axillary artery"],
+a:0,
+e:"The ulnar artery is the main contributor to the superficial palmar arch."
+},
+
+{
+q:"The radial artery mainly contributes to the:",
+o:["Deep palmar arch","Superficial palmar arch only","Axillary artery","Brachial artery"],
+a:0,
+e:"The radial artery is the major contributor to the deep palmar arch."
+},
+
+/* =========================
+   WRIST
+========================= */
+
+{
+q:"The flexor retinaculum is also called:",
+o:["Flexor ligament","Transverse carpal ligament","Annular ligament of elbow","Palmar fascia"],
+a:1,
+e:"Flexor retinaculum is also called the transverse carpal ligament."
+},
+
+{
+q:"Carpal tunnel syndrome primarily involves compression of:",
+o:["Median nerve","Ulnar nerve","Radial nerve","Axillary nerve"],
+a:0,
+e:"Carpal tunnel syndrome is caused by compression of the median nerve."
+},
+
+{
+q:"Which structure passes through the carpal tunnel?",
+o:["Median nerve","Ulnar nerve","Ulnar artery","Palmar cutaneous branch of median nerve"],
+a:0,
+e:"The median nerve passes through the carpal tunnel with the flexor tendons."
+},
+
+{
+q:"The palmar cutaneous branch of median nerve usually passes:",
+o:["Superficial to flexor retinaculum","Through carpal tunnel","Behind medial epicondyle","Through Guyon's canal"],
+a:0,
+e:"It passes superficial to the flexor retinaculum, so thenar skin sensation is often spared in carpal tunnel syndrome."
+},
+
+{
+q:"The wrist joint is mainly a:",
+o:["Condyloid synovial joint","Ball and socket","Pivot","Hinge only"],
+a:0,
+e:"The radiocarpal joint is a condyloid/ellipsoid synovial joint."
+},
+
+/* =========================
+   HAND
+========================= */
+
+{
+q:"How many carpal bones are present in one hand?",
+o:["5","6","8","10"],
+a:2,
+e:"There are eight carpal bones in each wrist."
+},
+
+{
+q:"The scaphoid belongs to the:",
+o:["Proximal row of carpal bones","Distal row","Metacarpals","Phalanges"],
+a:0,
+e:"Scaphoid is in the proximal row."
+},
+
+{
+q:"The lunate belongs to the:",
+o:["Proximal row","Distal row","Metacarpal row","Phalangeal row"],
+a:0,
+e:"Lunate is one of the four proximal-row carpal bones."
+},
+
+{
+q:"The capitate is located in the:",
+o:["Distal row","Proximal row","Forearm","Metacarpal shaft"],
+a:0,
+e:"Capitate is a distal-row carpal bone."
+},
+
+{
+q:"The hamate belongs to the:",
+o:["Proximal row","Distal row","Forearm","Wrist joint capsule only"],
+a:1,
+e:"Hamate is in the distal row."
+},
+
+{
+q:"The pisiform is a sesamoid bone within the tendon of:",
+o:["Flexor carpi ulnaris","Flexor carpi radialis","Palmaris longus","Pronator teres"],
+a:0,
+e:"Pisiform develops in the tendon of flexor carpi ulnaris."
+},
+
+{
+q:"The anatomical snuff box is related to the:",
+o:["Radial artery","Ulnar artery","Brachial artery","Axillary artery"],
+a:0,
+e:"The radial artery passes through the floor of the anatomical snuff box."
+},
+
+{
+q:"The scaphoid is clinically important because it is commonly fractured after:",
+o:["Fall on outstretched hand","Direct blow to elbow","Shoulder dislocation","Clavicle fracture"],
+a:0,
+e:"Scaphoid fracture commonly occurs after a fall on an outstretched hand."
+},
+
+{
+q:"Colles' fracture commonly affects the:",
+o:["Distal radius","Proximal ulna","Humeral shaft","Scaphoid only"],
+a:0,
+e:"Colles' fracture is a fracture of the distal radius."
+},
+
+{
+q:"The thenar muscles are mainly associated with movement of the:",
+o:["Thumb","Little finger","Index finger only","Wrist only"],
+a:0,
+e:"Thenar muscles control important movements of the thumb."
+},
+
+/* =========================
+   MORE APPLIED / UNIVERSITY PATTERN
+========================= */
+
+{
+q:"Erb's palsy commonly involves the roots:",
+o:["C5–C6","C7–C8","C8–T1","T1–T2"],
+a:0,
+e:"Erb's palsy classically involves C5 and C6, particularly the upper trunk."
+},
+
+{
+q:"Klumpke's palsy is classically associated with injury to:",
+o:["Lower trunk C8–T1","Upper trunk C5–C6","Middle trunk C7","Lateral cord only"],
+a:0,
+e:"Klumpke's palsy is associated with lower trunk involvement, especially C8–T1."
+},
+
+{
+q:"The long thoracic nerve supplies:",
+o:["Serratus anterior","Deltoid","Biceps","Triceps"],
+a:0,
+e:"Long thoracic nerve supplies serratus anterior."
+},
+
+{
+q:"Injury to long thoracic nerve can cause:",
+o:["Winging of scapula","Wrist drop","Claw hand","Ape thumb"],
+a:0,
+e:"Loss of serratus anterior function can cause winging of scapula."
+},
+
+{
+q:"The thoracodorsal nerve supplies:",
+o:["Latissimus dorsi","Pectoralis minor","Serratus anterior","Deltoid"],
+a:0,
+e:"Thoracodorsal nerve supplies latissimus dorsi."
+},
+
+{
+q:"The dorsal scapular nerve mainly supplies:",
+o:["Rhomboids","Deltoid","Biceps","Triceps"],
+a:0,
+e:"Dorsal scapular nerve supplies rhomboids and contributes to levator scapulae supply."
+},
+
+{
+q:"The suprascapular nerve supplies:",
+o:["Supraspinatus and infraspinatus","Deltoid only","Teres major only","Biceps only"],
+a:0,
+e:"Suprascapular nerve supplies supraspinatus and infraspinatus."
+},
+
+{
+q:"The axillary nerve is particularly vulnerable in:",
+o:["Surgical neck fracture of humerus","Distal radius fracture","Scaphoid fracture","Medial epicondyle fracture"],
+a:0,
+e:"The axillary nerve winds around the surgical neck of humerus."
+},
+
+{
+q:"The ulnar nerve is particularly vulnerable at the:",
+o:["Medial epicondyle","Surgical neck","Radial head","Anatomical snuff box"],
+a:0,
+e:"The ulnar nerve passes behind the medial epicondyle."
+},
+
+{
+q:"The radial nerve is particularly vulnerable in fractures of the:",
+o:["Shaft of humerus","Scaphoid","Distal radius","Clavicle only"],
+a:0,
+e:"The radial nerve lies in the radial groove on the shaft of humerus."
+},
+
+{
+q:"The median nerve may be compressed at the:",
+o:["Carpal tunnel","Radial groove","Surgical neck","Anatomical snuff box"],
+a:0,
+e:"Compression of median nerve in the carpal tunnel produces carpal tunnel syndrome."
+},
+
+{
+q:"The bicipital groove contains the tendon of:",
+o:["Long head of biceps brachii","Long head of triceps","Deltoid","Coracobrachialis"],
+a:0,
+e:"The long head of biceps tendon runs in the intertubercular sulcus."
+},
+
+{
+q:"The coracobrachialis is supplied by:",
+o:["Musculocutaneous nerve","Radial nerve","Ulnar nerve","Median nerve"],
+a:0,
+e:"Musculocutaneous nerve supplies coracobrachialis."
+},
+
+{
+q:"The brachialis muscle is mainly supplied by:",
+o:["Musculocutaneous nerve","Radial nerve only","Ulnar nerve","Axillary nerve"],
+a:0,
+e:"Brachialis is mainly supplied by musculocutaneous nerve, with a small radial contribution sometimes described."
+},
+
+{
+q:"The main action of brachialis is:",
+o:["Flexion of elbow","Extension of elbow","Supination only","Pronation only"],
+a:0,
+e:"Brachialis is a powerful flexor of the elbow."
+},
+
+{
+q:"The anatomical snuff box is bounded laterally mainly by tendons of:",
+o:["Abductor pollicis longus and extensor pollicis brevis","Flexor pollicis longus","Adductor pollicis","Extensor digitorum"],
+a:0,
+e:"APL and EPB form the lateral/anterior boundary of the anatomical snuff box."
+},
+
+{
+q:"The medial boundary of anatomical snuff box is formed mainly by:",
+o:["Extensor pollicis longus","Extensor carpi ulnaris","Flexor pollicis longus","Adductor pollicis"],
+a:0,
+e:"Extensor pollicis longus forms the medial/posterior boundary."
+},
+
+{
+q:"The superficial palmar arch is mainly formed by:",
+o:["Ulnar artery","Radial artery","Brachial artery","Axillary artery"],
+a:0,
+e:"The superficial palmar arch is mainly a continuation of the ulnar artery."
+},
+
+{
+q:"The deep palmar arch is mainly formed by:",
+o:["Radial artery","Ulnar artery","Brachial artery","Axillary artery"],
+a:0,
+e:"The radial artery is the main contributor to the deep palmar arch."
+},
+
+{
+q:"The dorsal scapular artery is associated with the:",
+o:["Scapular anastomosis","Carpal tunnel","Cubital fossa","Palmar arch"],
+a:0,
+e:"Dorsal scapular artery contributes to the arterial anastomosis around the scapula."
+},
+
+/* =========================
+   FINAL 10
+========================= */
+
+{
+q:"Which muscle is the strongest supinator of the forearm when the elbow is flexed?",
+o:["Biceps brachii","Pronator teres","Brachialis","Triceps"],
+a:0,
+e:"Biceps brachii is a powerful supinator, especially when the elbow is flexed."
+},
+
+{
+q:"Which muscle is the prime mover for extension of the elbow?",
+o:["Biceps","Triceps brachii","Brachialis","Pronator teres"],
+a:1,
+e:"Triceps brachii is the chief extensor of the elbow."
+},
+
+{
+q:"Which structure is NOT a content of the carpal tunnel?",
+o:["Median nerve","Flexor digitorum superficialis tendons","Flexor digitorum profundus tendons","Ulnar nerve"],
+a:3,
+e:"Ulnar nerve passes through Guyon's canal rather than the carpal tunnel."
+},
+
+{
+q:"The flexor retinaculum attaches medially to:",
+o:["Pisiform and hook of hamate","Scaphoid and trapezium","Capitate and lunate","Radius only"],
+a:0,
+e:"Medially it attaches to pisiform and hook of hamate."
+},
+
+{
+q:"The flexor retinaculum attaches laterally to:",
+o:["Scaphoid tubercle and trapezium","Pisiform and hamate","Capitate and lunate","Ulna"],
+a:0,
+e:"Laterally it attaches to the tubercles of scaphoid and trapezium."
+},
+
+{
+q:"The tendon of palmaris longus is located:",
+o:["Superficial to flexor retinaculum","Inside carpal tunnel","Behind medial epicondyle","In radial groove"],
+a:0,
+e:"Palmaris longus tendon passes superficial to the flexor retinaculum."
+},
+
+{
+q:"Which muscle is responsible for elevation of the upper limb above the horizontal with serratus anterior?",
+o:["Trapezius","Biceps","Brachialis","Pronator teres"],
+a:0,
+e:"Trapezius and serratus anterior work together for upward rotation of scapula."
+},
+
+{
+q:"The clavicle is classified as a:",
+o:["Long bone with unusual features","Short bone","Flat bone only","Sesamoid bone"],
+a:0,
+e:"Clavicle is a long bone with several unusual anatomical features."
+},
+
+{
+q:"The pectoral girdle consists mainly of:",
+o:["Clavicle and scapula","Humerus and radius","Radius and ulna","Scapula and humerus"],
+a:0,
+e:"The pectoral girdle consists of clavicle and scapula."
+},
+
+{
+q:"The upper limb is attached to the axial skeleton primarily through the:",
+o:["Sternoclavicular joint","Elbow joint","Wrist joint","Glenohumeral joint"],
+a:0,
+e:"The sternoclavicular joint is the only true synovial connection of the upper limb to the axial skeleton."
 }
 
 ];
@@ -607,7 +1338,7 @@ function loadQuestion(){
     scoreElement.textContent =
         "Score: " + score;
 
-    questionElement.textContent = q.question;
+    questionElement.textContent = q.q;
 
     optionsElement.innerHTML = "";
 
@@ -615,8 +1346,9 @@ function loadQuestion(){
     explanationElement.innerHTML = "";
 
     nextButton.style.display = "none";
+    nextButton.textContent = "Next Question →";
 
-    q.options.forEach((option,index)=>{
+    q.o.forEach((option,index)=>{
 
         const button = document.createElement("button");
 
@@ -648,7 +1380,7 @@ function selectAnswer(selected,selectedButton){
         button.disabled = true;
     });
 
-    if(selected === q.answer){
+    if(selected === q.a){
 
         selectedButton.classList.add("correct");
 
@@ -661,23 +1393,19 @@ function selectAnswer(selected,selectedButton){
 
         selectedButton.classList.add("wrong");
 
-        allOptions[q.answer].classList.add("correct");
+        allOptions[q.a].classList.add("correct");
     }
 
     explanationElement.innerHTML =
-        "<strong>💡 Explanation:</strong> " +
-        q.explanation;
+        "<strong>💡 Explanation:</strong> " + q.e;
 
     explanationElement.style.display = "block";
 
-    if(currentQuestion < questions.length - 1){
+    nextButton.style.display = "inline-block";
 
-        nextButton.style.display = "inline-block";
+    if(currentQuestion === questions.length - 1){
 
-    }else{
-
-        nextButton.textContent = "View Result →";
-        nextButton.style.display = "inline-block";
+        nextButton.textContent = "View Final Result →";
     }
 }
 
@@ -701,26 +1429,56 @@ function showResult(){
 
     document.getElementById("result").style.display = "block";
 
-    document.getElementById("finalScore").textContent =
-        score + " / " + questions.length;
+    const total = questions.length;
+
+    const wrong = total - score;
 
     const percentage =
-        Math.round((score / questions.length) * 100);
+        Math.round((score / total) * 100);
 
-    document.getElementById("percentage").textContent =
-        "Your Score: " + percentage + "%";
+    document.getElementById("finalScore").textContent =
+        score + " / " + total;
+
+    document.getElementById("correctCount").textContent =
+        score;
+
+    document.getElementById("wrongCount").textContent =
+        wrong;
+
+    document.getElementById("attemptedCount").textContent =
+        total;
+
+    document.getElementById("percentage").innerHTML =
+        "<strong>Your Percentage: " + percentage + "%</strong><br><br>" +
+        getPerformanceMessage(percentage);
+}
+
+function getPerformanceMessage(percentage){
+
+    if(percentage >= 80){
+        return "Excellent work! 🎯 Keep revising university-important Upper Limb topics.";
+    }
+
+    if(percentage >= 60){
+        return "Good performance! 👍 Revise the questions you got wrong and practice again.";
+    }
+
+    if(percentage >= 40){
+        return "Keep practicing! 📚 Focus on Brachial Plexus, nerves, joints and applied anatomy.";
+    }
+
+    return "More revision is needed. 💪 Review Upper Limb basics and attempt the quiz again.";
 }
 
 function restartQuiz(){
 
     currentQuestion = 0;
     score = 0;
+    answered = false;
 
     document.getElementById("result").style.display = "none";
 
     document.getElementById("quizArea").style.display = "block";
-
-    nextButton.textContent = "Next Question →";
 
     loadQuestion();
 }
