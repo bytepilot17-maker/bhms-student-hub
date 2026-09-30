@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>First Year BHMS MCQ Practice | Student Seva Maharashtra</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        /* HEADER */
+
+        header {
+            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 15px;
+        }
+
+        /* MAIN */
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: 25px auto 40px;
+        }
+
+        /* INTRO */
+
+        .intro {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .intro h2 {
+            color: #0d47a1;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* SUBJECT GRID */
+
+        .subjects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* CARD */
+
+        .subject-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px 20px;
+            text-align: center;
+            border: 1px solid #e5e5e5;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.09);
+            transition: 0.3s;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .subject-card h3 {
+            color: #0d47a1;
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .subject-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        /* BUTTON */
+
+        .mcq-btn {
+            display: block;
+            width: 100%;
+            background: #1976d2;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .mcq-btn:hover {
+            background: #0d47a1;
+        }
+
+        /* BACK BUTTON */
+
+        .dashboard-section {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .dashboard-btn {
+            display: inline-block;
+            background: #0d47a1;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .dashboard-btn:hover {
+            background: #08306b;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 40px;
+            background: #0d47a1;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        footer p {
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .subjects {
+                grid-template-columns: 1fr;
+            }
+
+            .subject-card {
+                padding: 22px 17px;
+            }
+
+            .subject-card h3 {
+                font-size: 18px;
+            }
+
+            .dashboard-btn {
+                width: 90%;
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>
+            📝 First Year BHMS
+        </h1>
+
+        <p>
+            MCQ Practice
+        </p>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <div class="container">
+
+
+        <!-- INTRO -->
+
+        <div class="intro">
+
+            <h2>
+                🎯 First Year BHMS MCQ Practice
+            </h2>
+
+            <p>
+                Choose a subject below and practice MCQs
+                to improve your preparation for BHMS examinations.
+            </p>
+
+        </div>
+
+
+
+        <!-- SUBJECTS -->
+
+        <div class="subjects">
+
+
+            <!-- ANATOMY -->
+
+            <div class="subject-card">
+
+                <div class="icon">
+                    🫀
+                </div>
+
+                <h3>
+                    Anatomy, Histology &amp; Embryology
+                </h3>
+
+                <p>
+                    Practice multiple choice questions from
+                    Anatomy, Histology and Embryology.
+                </p>
+
+                <a href="anatomy-mcq.html"
+                   class="mcq-btn">
+
+                    Start MCQ Practice →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- PHYSIOLOGY -->
+
+            <div class="subject-card">
+
+                <div class="icon">
+                    🧬
+                </div>
+
+                <h3>
+                    Human Physiology &amp; Bio-chemistry
+                </h3>
+
+                <p>
+                    Practice MCQs from Human Physiology
+                    and Bio-chemistry.
+                </p>
+
+                <a href="physiology-biochemistry-mcq.html"
+                   class="mcq-btn">
+
+                    Start MCQ Practice →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- PHARMACY -->
+
+            <div class="subject-card">
+
+                <div class="icon">
+                    💊
+                </div>
+
+                <h3>
+                    Homoeopathic Pharmacy
+                </h3>
+
+                <p>
+                    Practice important MCQs from
+                    Homoeopathic Pharmacy.
+                </p>
+
+                <a href="homoeopathic-pharmacy-mcq.html"
+                   class="mcq-btn">
+
+                    Start MCQ Practice →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- MATERIA MEDICA -->
+
+            <div class="subject-card">
+
+                <div class="icon">
+                    🌿
+                </div>
+
+                <h3>
+                    Homoeopathic Materia Medica
+                </h3>
+
+                <p>
+                    Practice MCQs from Homoeopathic
+                    Materia Medica.
+                </p>
+
+                <a href="materia-medica-mcq.html"
+                   class="mcq-btn">
+
+                    Start MCQ Practice →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ORGANON -->
+
+            <div class="subject-card">
+
+                <div class="icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Organon of Medicine &amp;
+                    Homoeopathic Philosophy
+                </h3>
+
+                <p>
+                    Practice MCQs from Organon of Medicine
+                    and Homoeopathic Philosophy.
+                </p>
+
+                <a href="organon-mcq.html"
+                   class="mcq-btn">
+
+                    Start MCQ Practice →
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- BACK TO DASHBOARD -->
+
+        <div class="dashboard-section">
+
+            <a href="first-year.html"
+               class="dashboard-btn">
+
+                ← Back to 1st Year Dashboard
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Student Seva Maharashtra
+        </p>
+
+        <p>
+            BHMS Study Resources | MCQ Practice
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
