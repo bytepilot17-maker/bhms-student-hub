@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anatomy MCQ Practice | First Year BHMS</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        /* HEADER */
+
+        header {
+            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            color: white;
+            text-align: center;
+            padding: 32px 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 29px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 15px;
+        }
+
+        /* MAIN */
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: 28px auto 45px;
+        }
+
+        /* INTRO */
+
+        .intro {
+            background: white;
+            padding: 28px 22px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .intro h2 {
+            color: #0d47a1;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* CHAPTER GRID */
+
+        .chapters {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        /* CHAPTER CARD */
+
+        .chapter-card {
+            background: white;
+            border-radius: 17px;
+            padding: 25px 20px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 9px 22px rgba(13,71,161,0.16);
+            border-color: #90caf9;
+        }
+
+        .chapter-number {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #0d47a1;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 5px 11px;
+            border-radius: 20px;
+            margin-bottom: 13px;
+        }
+
+        .chapter-icon {
+            font-size: 43px;
+            margin-bottom: 12px;
+        }
+
+        .chapter-card h3 {
+            color: #0d47a1;
+            font-size: 19px;
+            line-height: 1.4;
+            min-height: 53px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chapter-card p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 10px 0 18px;
+        }
+
+        /* START BUTTON */
+
+        .start-btn {
+            display: block;
+            width: 100%;
+            background: #1976d2;
+            color: white;
+            padding: 12px;
+            border-radius: 9px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .start-btn:hover {
+            background: #0d47a1;
+            transform: translateY(-2px);
+        }
+
+        /* BACK BUTTON */
+
+        .back-section {
+            text-align: center;
+            margin-top: 38px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #0d47a1;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #08306b;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0d47a1;
+            color: white;
+            text-align: center;
+            padding: 22px 10px;
+            margin-top: 45px;
+        }
+
+        footer p {
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        /* TABLET */
+
+        @media (max-width: 900px) {
+
+            .chapters {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 27px 12px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            .container {
+                width: 94%;
+                margin-top: 22px;
+            }
+
+            .intro {
+                padding: 23px 17px;
+            }
+
+            .intro h2 {
+                font-size: 21px;
+            }
+
+            .intro p {
+                font-size: 14px;
+            }
+
+            .chapters {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .chapter-card {
+                padding: 23px 17px;
+            }
+
+            .chapter-card h3 {
+                min-height: auto;
+                font-size: 18px;
+            }
+
+            .back-btn {
+                width: 90%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>
+            🫀 Anatomy MCQ Practice
+        </h1>
+
+        <p>
+            First Year BHMS • Chapter-wise MCQs
+        </p>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <div class="container">
+
+
+        <!-- INTRO -->
+
+        <div class="intro">
+
+            <h2>
+                📚 Anatomy, Histology &amp; Embryology
+            </h2>
+
+            <p>
+                Select a chapter below to practice
+                chapter-wise MCQs and improve your
+                First Year BHMS Anatomy preparation.
+            </p>
+
+        </div>
+
+
+
+        <!-- CHAPTERS -->
+
+        <div class="chapters">
+
+
+            <!-- 1. UPPER LIMB -->
+
+            <div class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 1
+                </span>
+
+                <div class="chapter-icon">
+                    🦴
+                </div>
+
+                <h3>
+                    Upper Limb
+                </h3>
+
+                <p>
+                    Practice important MCQs related
+                    to the Upper Limb.
+                </p>
+
+                <a href="upper-limb-mcq.html"
+                   class="start-btn">
+
+                    Start MCQ Practice →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- 2. LOWER LIMB -->
+
+            <div class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 2
+                </span>
+
+                <div class="chapter-icon">
+                    🦵
+                </div>
+
+                <h3>
+                    Lower Limb
+                </h3>
+
+                <p>
+                    Practice important MCQs related
+                    to the Lower Limb.
+                </p>
+
+                <a href="lower-limb-mcq.html"
+                   class="start-btn">
+
+                    Start MCQ Practice →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- 3. THORAX -->
+
+            <div class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 3
+                </span>
+
+                <div class="chapter-icon">
+                    🫁
+                </div>
+
+                <h3>
+                    Thorax
+                </h3>
+
+                <p>
+                    Practice important MCQs related
+                    to the Thorax.
+                </p>
+
+                <a href="thorax-mcq.html"
+                   class="start-btn">
+
+                    Start MCQ Practice →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- 4. EMBRYOLOGY -->
+
+            <div class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 4
+                </span>
+
+                <div class="chapter-icon">
+                    👶
+                </div>
+
+                <h3>
+                    Embryology
+                </h3>
+
+                <p>
+                    Practice important MCQs from
+                    Embryology.
+                </p>
+
+                <a href="embryology-mcq.html"
+                   class="start-btn">
+
+                    Start MCQ Practice →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- 5. GENERAL ANATOMY -->
+
+            <div class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 5
+                </span>
+
+                <div class="chapter-icon">
+                    🧍
+                </div>
+
+                <h3>
+                    General Anatomy
+                </h3>
+
+                <p>
+                    Practice basic and important
+                    General Anatomy MCQs.
+                </p>
+
+                <a href="general-anatomy-mcq.html"
+                   class="start-btn">
+
+                    Start MCQ Practice →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- 6. HISTOLOGY -->
+
+            <div class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 6
+                </span>
+
+                <div class="chapter-icon">
+                    🔬
+                </div>
+
+                <h3>
+                    Histology
+                </h3>
+
+                <p>
+                    Practice important MCQs from
+                    Histology.
+                </p>
+
+                <a href="histology-mcq.html"
+                   class="start-btn">
+
+                    Start MCQ Practice →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- 7. HNF -->
+
+            <div class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 7
+                </span>
+
+                <div class="chapter-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    HNF (Head, Neck &amp; Face)
+                </h3>
+
+                <p>
+                    Practice important MCQs from
+                    Head, Neck and Face.
+                </p>
+
+                <a href="hnf-mcq.html"
+                   class="start-btn">
+
+                    Start MCQ Practice →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- 8. CNS -->
+
+            <div class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 8
+                </span>
+
+                <div class="chapter-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    CNS (Central Nervous System)
+                </h3>
+
+                <p>
+                    Practice important MCQs from
+                    the Central Nervous System.
+                </p>
+
+                <a href="cns-mcq.html"
+                   class="start-btn">
+
+                    Start MCQ Practice →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- 9. ABDOMEN -->
+
+            <div class="chapter-card">
+
+                <span class="chapter-number">
+                    Chapter 9
+                </span>
+
+                <div class="chapter-icon">
+                    🫃
+                </div>
+
+                <h3>
+                    Abdomen
+                </h3>
+
+                <p>
+                    Practice important MCQs related
+                    to the Abdomen.
+                </p>
+
+                <a href="abdomen-mcq.html"
+                   class="start-btn">
+
+                    Start MCQ Practice →
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- BACK -->
+
+        <div class="back-section">
+
+            <a href="first-year-mcq-practice.html"
+               class="back-btn">
+
+                ← Back to MCQ Practice
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Student Seva Maharashtra
+        </p>
+
+        <p>
+            BHMS Study Resources | Anatomy MCQ Practice
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
