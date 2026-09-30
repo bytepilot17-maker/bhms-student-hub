@@ -1,421 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>1st Year BHMS | BHMS Student Hub</title>
-
-  <meta name="description"
-        content="1st Year BHMS study resources, subjects, notes, syllabus, question papers, MCQs and examination preparation.">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background: #f5f8fb;
-      color: #17202a;
-      line-height: 1.6;
-    }
-
-    /* HEADER */
-
-    header {
-      background: white;
-      border-bottom: 1px solid #e5e7eb;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .navbar {
-      max-width: 1150px;
-      margin: auto;
-      padding: 14px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      text-decoration: none;
-      color: #123b5d;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .logo-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 11px;
-      background: #e8f5ef;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-    }
-
-    .home-btn {
-      text-decoration: none;
-      background: #16845b;
-      color: white;
-      padding: 9px 15px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    /* HERO */
-
-    .hero {
-      background: linear-gradient(135deg, #eaf8f1, #f2faff);
-      padding: 65px 20px;
-      text-align: center;
-    }
-
-    .badge {
-      display: inline-block;
-      background: white;
-      border: 1px solid #ccebdd;
-      color: #16845b;
-      padding: 7px 15px;
-      border-radius: 30px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      color: #123b5d;
-      font-size: 42px;
-      margin-bottom: 12px;
-    }
-
-    .hero h1 span {
-      color: #16845b;
-    }
-
-    .hero p {
-      max-width: 680px;
-      margin: auto;
-      color: #63707a;
-      font-size: 15px;
-    }
-
-    /* GENERAL */
-
-    section {
-      padding: 60px 20px;
-    }
-
-    .container {
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    .heading {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .heading h2 {
-      color: #123b5d;
-      font-size: 30px;
-      margin-bottom: 7px;
-    }
-
-    .heading p {
-      color: #707b84;
-      font-size: 14px;
-    }
-
-    /* SUBJECTS */
-
-    .subject-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .subject {
-      background: white;
-      padding: 25px;
-      border-radius: 16px;
-      border: 1px solid #e5eaee;
-      transition: 0.25s;
-    }
-
-    .subject:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    }
-
-    .subject-icon {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
-
-    .subject h3 {
-      color: #123b5d;
-      font-size: 17px;
-      margin-bottom: 7px;
-    }
-
-    .subject p {
-      color: #707a83;
-      font-size: 13px;
-    }
-
-    /* RESOURCES */
-
-    .resource-section {
-      background: white;
-    }
-
-    .resource-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .resource {
-      text-decoration: none;
-      background: #f5f8fb;
-      border: 1px solid #e2e8ec;
-      border-radius: 14px;
-      padding: 22px 15px;
-      text-align: center;
-      color: #17202a;
-      transition: 0.25s;
-    }
-
-    .resource:hover {
-      transform: translateY(-4px);
-      border-color: #bfe5d3;
-    }
-
-    .resource div {
-      font-size: 29px;
-      margin-bottom: 9px;
-    }
-
-    .resource h3 {
-      color: #123b5d;
-      font-size: 15px;
-    }
-
-    /* STUDY PLAN */
-
-    .study-section {
-      background: #f5f8fb;
-    }
-
-    .study-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .study-card {
-      background: white;
-      border-radius: 15px;
-      padding: 25px;
-      border: 1px solid #e5eaee;
-    }
-
-    .study-card h3 {
-      color: #123b5d;
-      margin-bottom: 10px;
-    }
-
-    .study-card p {
-      color: #69747d;
-      font-size: 14px;
-    }
-
-    /* IMPORTANT */
-
-    .important {
-      background: #123b5d;
-    }
-
-    .important .heading h2 {
-      color: white;
-    }
-
-    .important .heading p {
-      color: #cbd9e3;
-    }
-
-    .question-box {
-      background: white;
-      border-radius: 15px;
-      padding: 25px;
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .question {
-      padding: 14px 0;
-      border-bottom: 1px solid #edf0f2;
-      font-size: 14px;
-      color: #4f5b64;
-    }
-
-    .question:last-child {
-      border-bottom: none;
-    }
-
-    .number {
-      display: inline-flex;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      background: #e8f5ef;
-      color: #16845b;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      font-weight: bold;
-      margin-right: 8px;
-    }
-
-    /* CTA */
-
-    .cta {
-      background: #eaf8f1;
-      text-align: center;
-    }
-
-    .cta h2 {
-      color: #123b5d;
-      margin-bottom: 10px;
-    }
-
-    .cta p {
-      color: #66727b;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      background: #16845b;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #0d2c42;
-      color: #b9c6ce;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 12px;
-    }
-
-    footer strong {
-      color: white;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 800px) {
-
-      .subject-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .resource-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .study-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-    }
-
-    @media (max-width: 520px) {
-
-      .navbar {
-        padding: 12px 15px;
-      }
-
-      .logo {
-        font-size: 17px;
-      }
-
-      .home-btn {
-        padding: 8px 11px;
-      }
-
-      .hero {
-        padding: 50px 18px;
-      }
-
-      .hero h1 {
-        font-size: 31px;
-      }
-
-      section {
-        padding: 50px 16px;
-      }
-
-      .heading h2 {
-        font-size: 26px;
-      }
-
-      .subject-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .resource-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>1st Year BHMS | BHMS Student Hub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+
+        header {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 21px;
+        }
+
+        .home-btn {
+            background: white;
+            color: #1e40af;
+            text-decoration: none;
+            padding: 9px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: linear-gradient(135deg, #dbeafe, #eff6ff);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero .emoji {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            color: #1e3a8a;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #475569;
+            font-size: 16px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            margin-top: 18px;
+            background: #2563eb;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* MAIN */
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #1e3a8a;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #64748b;
+            font-size: 15px;
+            margin-bottom: 28px;
+        }
+
+        /* RESOURCE GRID */
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .resource-card {
+            background: white;
+            padding: 24px 18px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #1e293b;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+            border: 1px solid #e2e8f0;
+            transition: 0.25s;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(37,99,235,0.15);
+            border-color: #93c5fd;
+        }
+
+        .resource-icon {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .resource-card h3 {
+            color: #1e40af;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+
+        .resource-card p {
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* SUBJECTS */
+
+        .subjects-section {
+            margin-top: 55px;
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .subject-card {
+            background: white;
+            padding: 22px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: #1e293b;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            border-left: 5px solid #2563eb;
+            transition: 0.25s;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-3px);
+            background: #eff6ff;
+        }
+
+        .subject-icon {
+            font-size: 32px;
+            min-width: 45px;
+            text-align: center;
+        }
+
+        .subject-card h3 {
+            color: #1e40af;
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+
+        .subject-card p {
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* STUDY PLAN */
+
+        .study-section {
+            margin-top: 55px;
+        }
+
+        .study-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .study-card {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .study-card .icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .study-card h3 {
+            color: #1e40af;
+            margin-bottom: 7px;
+        }
+
+        .study-card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* IMPORTANT TOPICS */
+
+        .topics {
+            margin-top: 55px;
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            padding: 32px 25px;
+            border-radius: 18px;
+        }
+
+        .topics ul {
+            max-width: 750px;
+            margin: 20px auto 0;
+            padding-left: 22px;
+        }
+
+        .topics li {
+            margin: 11px 0;
+            color: #334155;
+        }
+
+        /* CTA */
+
+        .cta {
+            margin-top: 55px;
+            background: linear-gradient(135deg, #1e40af, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 18px;
+        }
+
+        .cta h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            margin-bottom: 20px;
+        }
+
+        .cta a {
+            display: inline-block;
+            background: white;
+            color: #1e40af;
+            padding: 11px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 28px 15px;
+            margin-top: 45px;
+            font-size: 14px;
+        }
+
+        footer p:first-child {
+            margin-bottom: 5px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            .resource-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .study-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 18px;
+            }
+
+            .home-btn {
+                padding: 8px 11px;
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 40px 15px;
+            }
+
+            .hero .emoji {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 29px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 30px 15px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .resource-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .resource-card {
+                padding: 20px 10px;
+            }
+
+            .resource-icon {
+                font-size: 32px;
+            }
+
+            .resource-card h3 {
+                font-size: 15px;
+            }
+
+            .resource-card p {
+                font-size: 12px;
+            }
+
+            .subject-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .subject-card {
+                padding: 18px 15px;
+            }
+
+            .topics {
+                padding: 25px 18px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
 
 <!-- HEADER -->
 
 <header>
 
-  <div class="navbar">
-
-    <a href="index.html" class="logo">
-
-      <div class="logo-icon">
-        🩺
-      </div>
-
-      BHMS Student Hub
-
-    </a>
+    <h1>BHMS Student Hub</h1>
 
     <a href="index.html" class="home-btn">
-      ← Home
+        ← Home
     </a>
-
-  </div>
 
 </header>
 
@@ -424,465 +401,462 @@
 
 <section class="hero">
 
-  <span class="badge">
-    🌱 BHMS 1st Year
-  </span>
+    <div class="emoji">📚</div>
 
-  <h1>
-    1st Year <span>BHMS</span>
-  </h1>
-
-  <p>
-    Your complete study space for First BHMS —
-    subjects, notes, syllabus, question papers,
-    MCQs and examination preparation.
-  </p>
-
-</section>
-
-
-<!-- SUBJECTS -->
-
-<section>
-
-  <div class="container">
-
-    <div class="heading">
-
-      <h2>📚 1st Year BHMS Subjects</h2>
-
-      <p>
-        Explore the major components of the First BHMS curriculum.
-      </p>
-
-    </div>
-
-
-    <div class="subject-grid">
-
-
-      <div class="subject">
-
-        <div class="subject-icon">
-          🦴
-        </div>
-
-        <h3>
-          Anatomy, Histology & Embryology
-        </h3>
-
-        <p>
-          Study human anatomy, tissues, organs and embryological development.
-        </p>
-
-      </div>
-
-
-      <div class="subject">
-
-        <div class="subject-icon">
-          ❤️
-        </div>
-
-        <h3>
-          Physiology & Biochemistry
-        </h3>
-
-        <p>
-          Learn normal body functions along with essential biochemical concepts.
-        </p>
-
-      </div>
-
-
-      <div class="subject">
-
-        <div class="subject-icon">
-          🧪
-        </div>
-
-        <h3>
-          Homoeopathic Pharmacy
-        </h3>
-
-        <p>
-          Explore principles, preparation and handling of homoeopathic medicines.
-        </p>
-
-      </div>
-
-
-      <div class="subject">
-
-        <div class="subject-icon">
-          💊
-        </div>
-
-        <h3>
-          Homoeopathic Materia Medica
-        </h3>
-
-        <p>
-          Learn the foundations of homoeopathic remedies and materia medica.
-        </p>
-
-      </div>
-
-
-      <div class="subject">
-
-        <div class="subject-icon">
-          🔎
-        </div>
-
-        <h3>
-          Repertory & Case Taking
-        </h3>
-
-        <p>
-          Introduction to repertory concepts and basic case-taking approaches.
-        </p>
-
-      </div>
-
-
-      <div class="subject">
-
-        <div class="subject-icon">
-          📖
-        </div>
-
-        <h3>
-          Organon & Homoeopathic Philosophy
-        </h3>
-
-        <p>
-          Study Organon, homoeopathic philosophy and fundamentals of psychology.
-        </p>
-
-      </div>
-
-
-      <div class="subject">
-
-        <div class="subject-icon">
-          🧘
-        </div>
-
-        <h3>
-          Yoga for Health Promotion
-        </h3>
-
-        <p>
-          Explore yoga concepts included in the First BHMS curriculum.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- RESOURCES -->
-
-<section class="resource-section">
-
-  <div class="container">
-
-    <div class="heading">
-
-      <h2>🎯 1st Year Study Resources</h2>
-
-      <p>
-        Quick access to important academic resources.
-      </p>
-
-    </div>
-
-
-    <div class="resource-grid">
-
-
-      <a href="#" class="resource">
-
-        <div>📖</div>
-
-        <h3>
-          Notes
-        </h3>
-
-      </a>
-
-
-      <a href="#" class="resource">
-
-        <div>📝</div>
-
-        <h3>
-          Question Papers
-        </h3>
-
-      </a>
-
-
-      <a href="#" class="resource">
-
-        <div>🎯</div>
-
-        <h3>
-          Important Questions
-        </h3>
-
-      </a>
-
-
-      <a href="#" class="resource">
-
-        <div>🧠</div>
-
-        <h3>
-          MCQ Practice
-        </h3>
-
-      </a>
-
-
-      <a href="#" class="resource">
-
-        <div>📚</div>
-
-        <h3>
-          Syllabus
-        </h3>
-
-      </a>
-
-
-      <a href="#" class="resource">
-
-        <div>🎤</div>
-
-        <h3>
-          Viva Questions
-        </h3>
-
-      </a>
-
-
-      <a href="#" class="resource">
-
-        <div>🔄</div>
-
-        <h3>
-          Quick Revision
-        </h3>
-
-      </a>
-
-
-      <a href="#" class="resource">
-
-        <div>📅</div>
-
-        <h3>
-          Exam Preparation
-        </h3>
-
-      </a>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- STUDY PLAN -->
-
-<section class="study-section">
-
-  <div class="container">
-
-    <div class="heading">
-
-      <h2>📅 Study Preparation</h2>
-
-      <p>
-        Build your preparation step by step.
-      </p>
-
-    </div>
-
-
-    <div class="study-grid">
-
-
-      <div class="study-card">
-
-        <h3>
-          📖 Learn
-        </h3>
-
-        <p>
-          Start with concepts and understand the basics of each subject
-          before moving towards detailed topics.
-        </p>
-
-      </div>
-
-
-      <div class="study-card">
-
-        <h3>
-          📝 Practice
-        </h3>
-
-        <p>
-          Practice previous examination questions and revise frequently
-          asked topics.
-        </p>
-
-      </div>
-
-
-      <div class="study-card">
-
-        <h3>
-          🔄 Revise
-        </h3>
-
-        <p>
-          Use short notes, important questions and quick revision
-          resources before examinations.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- IMPORTANT TOPICS -->
-
-<section class="important">
-
-  <div class="container">
-
-    <div class="heading">
-
-      <h2>
-        ⭐ Important Study Areas
-      </h2>
-
-      <p>
-        Areas students can use for structured examination preparation.
-      </p>
-
-    </div>
-
-
-    <div class="question-box">
-
-
-      <div class="question">
-
-        <span class="number">1</span>
-
-        Understand fundamental concepts before memorising details.
-
-      </div>
-
-
-      <div class="question">
-
-        <span class="number">2</span>
-
-        Revise important definitions, classifications and basic concepts.
-
-      </div>
-
-
-      <div class="question">
-
-        <span class="number">3</span>
-
-        Practice diagrams and labelled structures where applicable.
-
-      </div>
-
-
-      <div class="question">
-
-        <span class="number">4</span>
-
-        Practise previous university examination questions.
-
-      </div>
-
-
-      <div class="question">
-
-        <span class="number">5</span>
-
-        Prepare short-answer, long-answer and viva topics systematically.
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-  <div class="container">
-
-    <h2>
-      Ready to Start Your First BHMS Journey?
-    </h2>
+    <h2>1st Year BHMS</h2>
 
     <p>
-      Explore your subjects and build your study resources.
+        Your Complete 1st Year BHMS Study Hub
     </p>
 
-    <a href="index.html" class="btn">
-      ← Back to BHMS Student Hub
-    </a>
-
-  </div>
+    <span class="hero-badge">
+        Study • Practice • Revise • Prepare
+    </span>
 
 </section>
+
+
+<div class="container">
+
+
+    <!-- MAIN RESOURCES -->
+
+    <section>
+
+        <h2 class="section-title">
+            📖 Study & Exam Resources
+        </h2>
+
+        <p class="section-subtitle">
+            Everything you need for your 1st Year BHMS preparation
+        </p>
+
+
+        <div class="resource-grid">
+
+
+            <!-- SYLLABUS -->
+
+            <a href="first-year-syllabus.html" class="resource-card">
+
+                <div class="resource-icon">
+                    📋
+                </div>
+
+                <h3>Syllabus</h3>
+
+                <p>
+                    Complete 1st Year BHMS syllabus
+                </p>
+
+            </a>
+
+
+            <!-- NOTES -->
+
+            <a href="first-year-notes.html" class="resource-card">
+
+                <div class="resource-icon">
+                    📚
+                </div>
+
+                <h3>Notes</h3>
+
+                <p>
+                    Subject-wise study notes
+                </p>
+
+            </a>
+
+
+            <!-- QUESTION PAPERS -->
+
+            <a href="first-year-question-papers.html" class="resource-card">
+
+                <div class="resource-icon">
+                    📄
+                </div>
+
+                <h3>Question Papers</h3>
+
+                <p>
+                    Previous university question papers
+                </p>
+
+            </a>
+
+
+            <!-- IMPORTANT QUESTIONS -->
+
+            <a href="first-year-important-questions.html" class="resource-card">
+
+                <div class="resource-icon">
+                    ⭐
+                </div>
+
+                <h3>Important Questions</h3>
+
+                <p>
+                    Exam-focused important questions
+                </p>
+
+            </a>
+
+
+            <!-- MCQ -->
+
+            <a href="first-year-mcq.html" class="resource-card">
+
+                <div class="resource-icon">
+                    📝
+                </div>
+
+                <h3>MCQ Practice</h3>
+
+                <p>
+                    Practice subject-wise MCQs
+                </p>
+
+            </a>
+
+
+            <!-- VIVA -->
+
+            <a href="first-year-viva.html" class="resource-card">
+
+                <div class="resource-icon">
+                    🎤
+                </div>
+
+                <h3>Viva Questions</h3>
+
+                <p>
+                    Practical and viva preparation
+                </p>
+
+            </a>
+
+
+            <!-- QUICK REVISION -->
+
+            <a href="first-year-revision.html" class="resource-card">
+
+                <div class="resource-icon">
+                    ⚡
+                </div>
+
+                <h3>Quick Revision</h3>
+
+                <p>
+                    Short revision material
+                </p>
+
+            </a>
+
+
+            <!-- EXAM PREPARATION -->
+
+            <a href="first-year-exam-preparation.html" class="resource-card">
+
+                <div class="resource-icon">
+                    🎯
+                </div>
+
+                <h3>Exam Preparation</h3>
+
+                <p>
+                    Study strategy and preparation
+                </p>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SUBJECTS -->
+
+    <section class="subjects-section">
+
+        <h2 class="section-title">
+            🧠 1st Year Subjects
+        </h2>
+
+        <p class="section-subtitle">
+            Select a subject to access its study resources
+        </p>
+
+
+        <div class="subject-grid">
+
+
+            <a href="first-year-anatomy.html" class="subject-card">
+
+                <div class="subject-icon">
+                    🫀
+                </div>
+
+                <div>
+                    <h3>Anatomy, Histology & Embryology</h3>
+
+                    <p>
+                        Notes • MCQs • Questions • Viva
+                    </p>
+                </div>
+
+            </a>
+
+
+            <a href="first-year-physiology.html" class="subject-card">
+
+                <div class="subject-icon">
+                    🧬
+                </div>
+
+                <div>
+                    <h3>Human Physiology & Biochemistry</h3>
+
+                    <p>
+                        Notes • MCQs • Questions • Viva
+                    </p>
+                </div>
+
+            </a>
+
+
+            <a href="first-year-pharmacy.html" class="subject-card">
+
+                <div class="subject-icon">
+                    💊
+                </div>
+
+                <div>
+                    <h3>Homoeopathic Pharmacy</h3>
+
+                    <p>
+                        Notes • MCQs • Questions • Viva
+                    </p>
+                </div>
+
+            </a>
+
+
+            <a href="first-year-materia-medica.html" class="subject-card">
+
+                <div class="subject-icon">
+                    🌿
+                </div>
+
+                <div>
+                    <h3>Homoeopathic Materia Medica</h3>
+
+                    <p>
+                        Notes • MCQs • Questions • Viva
+                    </p>
+                </div>
+
+            </a>
+
+
+            <a href="first-year-repertory.html" class="subject-card">
+
+                <div class="subject-icon">
+                    📖
+                </div>
+
+                <div>
+                    <h3>Homoeopathic Repertory & Case Taking</h3>
+
+                    <p>
+                        Notes • MCQs • Questions • Viva
+                    </p>
+                </div>
+
+            </a>
+
+
+            <a href="first-year-organon.html" class="subject-card">
+
+                <div class="subject-icon">
+                    🧠
+                </div>
+
+                <div>
+                    <h3>Organon of Medicine & Homoeopathic Philosophy</h3>
+
+                    <p>
+                        Notes • MCQs • Questions • Viva
+                    </p>
+                </div>
+
+            </a>
+
+
+            <a href="first-year-yoga.html" class="subject-card">
+
+                <div class="subject-icon">
+                    🧘
+                </div>
+
+                <div>
+                    <h3>Yoga for Health Promotion</h3>
+
+                    <p>
+                        Notes • Important Topics • Revision
+                    </p>
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- STUDY METHOD -->
+
+    <section class="study-section">
+
+        <h2 class="section-title">
+            🎯 How to Prepare
+        </h2>
+
+        <p class="section-subtitle">
+            Follow a simple study cycle
+        </p>
+
+
+        <div class="study-grid">
+
+
+            <div class="study-card">
+
+                <div class="icon">
+                    📖
+                </div>
+
+                <h3>1. Learn</h3>
+
+                <p>
+                    Understand concepts and build strong
+                    subject fundamentals.
+                </p>
+
+            </div>
+
+
+            <div class="study-card">
+
+                <div class="icon">
+                    📝
+                </div>
+
+                <h3>2. Practice</h3>
+
+                <p>
+                    Solve MCQs, previous questions and
+                    practice viva topics.
+                </p>
+
+            </div>
+
+
+            <div class="study-card">
+
+                <div class="icon">
+                    🔄
+                </div>
+
+                <h3>3. Revise</h3>
+
+                <p>
+                    Revise important concepts regularly
+                    before examinations.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- IMPORTANT TOPICS -->
+
+    <section class="topics">
+
+        <h2 class="section-title">
+            🔥 Important Study Areas
+        </h2>
+
+        <ul>
+
+            <li>
+                Understand the basic concepts of every subject.
+            </li>
+
+            <li>
+                Maintain subject-wise notes for easy revision.
+            </li>
+
+            <li>
+                Practice previous university examination questions.
+            </li>
+
+            <li>
+                Solve MCQs regularly to check your preparation.
+            </li>
+
+            <li>
+                Prepare viva questions along with theory.
+            </li>
+
+            <li>
+                Keep short revision notes for examination time.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <h2>
+            🚀 Start Your 1st Year BHMS Preparation
+        </h2>
+
+        <p>
+            Study smart, practice regularly and revise effectively.
+        </p>
+
+        <a href="index.html">
+            ← Back to Home
+        </a>
+
+    </section>
+
+</div>
 
 
 <!-- FOOTER -->
 
 <footer>
 
-  <strong>
-    🩺 BHMS Student Hub
-  </strong>
+    <p>
+        © 2026 BHMS Student Hub
+    </p>
 
-  <br><br>
-
-  First BHMS Study Resources
-
-  <br><br>
-
-  © 2026 BHMS Student Hub. All Rights Reserved.
+    <p>
+        Study Smart • Prepare Better • Achieve More
+    </p>
 
 </footer>
 
