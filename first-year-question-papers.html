@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>1st Year BHMS Question Papers | BHMS Student Hub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #123c69, #1976d2);
+            color: white;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .home-btn {
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.15);
+            padding: 9px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #e8f3ff, #ffffff);
+            text-align: center;
+            padding: 55px 20px 45px;
+        }
+
+        .hero-icon {
+            font-size: 52px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 34px;
+            color: #123c69;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #5b6470;
+            font-size: 17px;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 18px;
+            background: #1976d2;
+            color: white;
+            padding: 7px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .info-box {
+            background: white;
+            padding: 22px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+            margin-bottom: 35px;
+            border-left: 5px solid #1976d2;
+        }
+
+        .info-box h2 {
+            color: #123c69;
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .info-box p {
+            color: #667085;
+            font-size: 14px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .section-title h2 {
+            color: #123c69;
+            font-size: 27px;
+            margin-bottom: 7px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .subject-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+            border: 1px solid #e7edf5;
+            transition: 0.2s;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 9px 25px rgba(0,0,0,0.11);
+        }
+
+        .subject-icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .subject-number {
+            color: #1976d2;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .subject-card h3 {
+            color: #123c69;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .subject-card p {
+            color: #667085;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .paper-box {
+            background: #f8fbff;
+            border-radius: 9px;
+            padding: 12px;
+            border: 1px dashed #b8cce3;
+            color: #667085;
+            font-size: 13px;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 10px;
+            background: #eef2f7;
+            color: #5b6470;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .coming-box {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #123c69, #1976d2);
+            color: white;
+            padding: 28px 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .coming-box h2 {
+            margin-bottom: 8px;
+            font-size: 23px;
+        }
+
+        .coming-box p {
+            font-size: 14px;
+            opacity: 0.95;
+        }
+
+        .back-section {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #123c69;
+            color: white;
+            padding: 13px 24px;
+            border-radius: 9px;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 30px;
+            background: #123c69;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                padding: 15px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .home-btn {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 40px 15px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .subject-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 25px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .hero h1 {
+                font-size: 25px;
+            }
+
+            .section-title h2 {
+                font-size: 23px;
+            }
+
+            .subject-card {
+                padding: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🎓 BHMS Student Hub
+    </div>
+
+    <a href="index.html" class="home-btn">
+        🏠 Home
+    </a>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-icon">📝</div>
+
+    <h1>1st Year BHMS Question Papers</h1>
+
+    <p>
+        Previous university papers and exam practice resources
+    </p>
+
+    <span class="badge">
+        FIRST BHMS • QUESTION PAPERS
+    </span>
+
+</section>
+
+
+<main class="container">
+
+
+    <div class="info-box">
+
+        <h2>📌 Practice With Previous Papers</h2>
+
+        <p>
+            Previous question papers can help students understand
+            examination patterns, frequently asked areas and question
+            formats. Verified papers can be added subject-wise to this page.
+        </p>
+
+    </div>
+
+
+    <div class="section-title">
+
+        <h2>📚 Choose Your Subject</h2>
+
+        <p>
+            Select a subject to explore its question papers
+        </p>
+
+    </div>
+
+
+    <div class="subject-grid">
+
+
+        <!-- Anatomy -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">
+                🫀
+            </div>
+
+            <div class="subject-number">
+                SUBJECT 01
+            </div>
+
+            <h3>
+                Anatomy, Histology & Embryology
+            </h3>
+
+            <p>
+                University question papers and examination resources
+                for Anatomy.
+            </p>
+
+            <div class="paper-box">
+                📄 Question papers will be added here.
+            </div>
+
+            <span class="status">
+                Coming Soon
+            </span>
+
+        </div>
+
+
+        <!-- Physiology -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">
+                🧬
+            </div>
+
+            <div class="subject-number">
+                SUBJECT 02
+            </div>
+
+            <h3>
+                Human Physiology & Bio-chemistry
+            </h3>
+
+            <p>
+                University question papers and examination resources
+                for Physiology and Biochemistry.
+            </p>
+
+            <div class="paper-box">
+                📄 Question papers will be added here.
+            </div>
+
+            <span class="status">
+                Coming Soon
+            </span>
+
+        </div>
+
+
+        <!-- Pharmacy -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">
+                💊
+            </div>
+
+            <div class="subject-number">
+                SUBJECT 03
+            </div>
+
+            <h3>
+                Homoeopathic Pharmacy
+            </h3>
+
+            <p>
+                Previous papers and examination resources for
+                Homoeopathic Pharmacy.
+            </p>
+
+            <div class="paper-box">
+                📄 Question papers will be added here.
+            </div>
+
+            <span class="status">
+                Coming Soon
+            </span>
+
+        </div>
+
+
+        <!-- Materia Medica -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">
+                🌿
+            </div>
+
+            <div class="subject-number">
+                SUBJECT 04
+            </div>
+
+            <h3>
+                Homoeopathic Materia Medica
+            </h3>
+
+            <p>
+                Previous papers and examination resources for
+                Materia Medica.
+            </p>
+
+            <div class="paper-box">
+                📄 Question papers will be added here.
+            </div>
+
+            <span class="status">
+                Coming Soon
+            </span>
+
+        </div>
+
+
+        <!-- Repertory -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">
+                📖
+            </div>
+
+            <div class="subject-number">
+                SUBJECT 05
+            </div>
+
+            <h3>
+                Homoeopathic Repertory & Case Taking
+            </h3>
+
+            <p>
+                Previous papers and examination resources for
+                Repertory and Case Taking.
+            </p>
+
+            <div class="paper-box">
+                📄 Question papers will be added here.
+            </div>
+
+            <span class="status">
+                Coming Soon
+            </span>
+
+        </div>
+
+
+        <!-- Organon -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">
+                🧠
+            </div>
+
+            <div class="subject-number">
+                SUBJECT 06
+            </div>
+
+            <h3>
+                Organon of Medicine & Homoeopathic Philosophy
+            </h3>
+
+            <p>
+                Previous papers and examination resources for
+                Organon and related curriculum.
+            </p>
+
+            <div class="paper-box">
+                📄 Question papers will be added here.
+            </div>
+
+            <span class="status">
+                Coming Soon
+            </span>
+
+        </div>
+
+
+        <!-- Yoga -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">
+                🧘
+            </div>
+
+            <div class="subject-number">
+                SUBJECT 07
+            </div>
+
+            <h3>
+                Yoga for Health Promotion
+            </h3>
+
+            <p>
+                Question papers and study resources related to
+                First BHMS Yoga.
+            </p>
+
+            <div class="paper-box">
+                📄 Question papers will be added here.
+            </div>
+
+            <span class="status">
+                Coming Soon
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="coming-box">
+
+        <h2>🚀 Question Paper Library</h2>
+
+        <p>
+            Verified university question papers will be organized
+            subject-wise and year-wise as they are added to the website.
+        </p>
+
+    </div>
+
+
+    <div class="back-section">
+
+        <a href="first-year.html" class="back-btn">
+            ← Back to 1st Year Dashboard
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 BHMS Student Hub • Study • Practice • Revise
+    </p>
+
+</footer>
+
+</body>
+</html>
