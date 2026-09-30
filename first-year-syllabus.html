@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>1st Year BHMS Syllabus | BHMS Student Hub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #123c69, #1976d2);
+            color: white;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .home-btn {
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.15);
+            padding: 9px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #e8f3ff, #ffffff);
+            text-align: center;
+            padding: 55px 20px 45px;
+        }
+
+        .hero-icon {
+            font-size: 50px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: 34px;
+            color: #123c69;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #5b6470;
+            font-size: 17px;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 18px;
+            background: #1976d2;
+            color: white;
+            padding: 7px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .notice {
+            background: white;
+            border-left: 5px solid #1976d2;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            margin-bottom: 35px;
+        }
+
+        .notice h2 {
+            color: #123c69;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .notice p {
+            color: #5b6470;
+            margin-bottom: 15px;
+        }
+
+        .official-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #1976d2;
+            color: white;
+            padding: 11px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .section-title h2 {
+            color: #123c69;
+            font-size: 27px;
+            margin-bottom: 7px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .subject-card {
+            background: white;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+            border: 1px solid #e7edf5;
+            transition: 0.2s;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+        }
+
+        .subject-icon {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .subject-number {
+            color: #1976d2;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .subject-card h3 {
+            color: #123c69;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .subject-card p {
+            color: #667085;
+            font-size: 14px;
+        }
+
+        .how-section {
+            margin-top: 45px;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .step {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .step-icon {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .step h3 {
+            color: #123c69;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .step p {
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        .back-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #123c69;
+            color: white;
+            padding: 13px 24px;
+            border-radius: 9px;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 30px;
+            background: #123c69;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                padding: 15px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .home-btn {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 40px 15px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .subject-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .container {
+                padding: 25px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 25px;
+            }
+
+            .section-title h2 {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🎓 BHMS Student Hub</div>
+    <a href="index.html" class="home-btn">🏠 Home</a>
+</header>
+
+<section class="hero">
+
+    <div class="hero-icon">📋</div>
+
+    <h1>1st Year BHMS Syllabus</h1>
+
+    <p>
+        Your complete reference guide for the 1st Year BHMS curriculum
+    </p>
+
+    <span class="badge">FIRST BHMS</span>
+
+</section>
+
+<main class="container">
+
+    <div class="notice">
+
+        <h2>📌 Official Curriculum Reference</h2>
+
+        <p>
+            The subject structure below is based on the 1st BHMS curriculum
+            published by the National Commission for Homoeopathy (NCH).
+            For the latest official curriculum and detailed regulations,
+            always refer to the official NCH source.
+        </p>
+
+        <a
+            href="https://nch.org.in/first-bhms"
+            target="_blank"
+            rel="noopener"
+            class="official-btn">
+            🔗 View Official NCH Curriculum
+        </a>
+
+    </div>
+
+
+    <div class="section-title">
+
+        <h2>📚 1st Year BHMS Subjects</h2>
+
+        <p>
+            Explore the major curriculum components of First BHMS
+        </p>
+
+    </div>
+
+
+    <div class="subject-grid">
+
+        <div class="subject-card">
+
+            <div class="subject-icon">🫀</div>
+
+            <div class="subject-number">
+                SUBJECT 01
+            </div>
+
+            <h3>
+                Anatomy, Histology and Embryology
+            </h3>
+
+            <p>
+                First BHMS curriculum component covering the study of
+                human anatomy, tissues and embryological development.
+            </p>
+
+        </div>
+
+
+        <div class="subject-card">
+
+            <div class="subject-icon">🧬</div>
+
+            <div class="subject-number">
+                SUBJECT 02
+            </div>
+
+            <h3>
+                Human Physiology &amp; Bio-chemistry
+            </h3>
+
+            <p>
+                First BHMS curriculum component covering human physiology
+                and biochemistry.
+            </p>
+
+        </div>
+
+
+        <div class="subject-card">
+
+            <div class="subject-icon">💊</div>
+
+            <div class="subject-number">
+                SUBJECT 03
+            </div>
+
+            <h3>
+                Homoeopathic Pharmacy
+            </h3>
+
+            <p>
+                First BHMS curriculum component related to Homoeopathic
+                pharmacy and its academic study.
+            </p>
+
+        </div>
+
+
+        <div class="subject-card">
+
+            <div class="subject-icon">🌿</div>
+
+            <div class="subject-number">
+                SUBJECT 04
+            </div>
+
+            <h3>
+                Homoeopathic Materia Medica
+            </h3>
+
+            <p>
+                First BHMS curriculum component focused on the academic
+                study of Homoeopathic Materia Medica.
+            </p>
+
+        </div>
+
+
+        <div class="subject-card">
+
+            <div class="subject-icon">📖</div>
+
+            <div class="subject-number">
+                SUBJECT 05
+            </div>
+
+            <h3>
+                Homoeopathic Repertory and Case Taking
+            </h3>
+
+            <p>
+                First BHMS curriculum component covering Repertory and
+                Case Taking.
+            </p>
+
+        </div>
+
+
+        <div class="subject-card">
+
+            <div class="subject-icon">🧠</div>
+
+            <div class="subject-number">
+                SUBJECT 06
+            </div>
+
+            <h3>
+                Organon of Medicine &amp; Homoeopathic Philosophy
+            </h3>
+
+            <p>
+                Includes Organon of Medicine, Homoeopathic Philosophy
+                and Fundamentals of Psychology.
+            </p>
+
+        </div>
+
+
+        <div class="subject-card">
+
+            <div class="subject-icon">🧘</div>
+
+            <div class="subject-number">
+                SUBJECT 07
+            </div>
+
+            <h3>
+                Yoga for Health Promotion
+            </h3>
+
+            <p>
+                Yoga for Health Promotion is included as a component
+                of the First BHMS curriculum.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section class="how-section">
+
+        <div class="section-title">
+
+            <h2>🚀 How to Use BHMS Student Hub</h2>
+
+            <p>
+                Study smarter with organized resources
+            </p>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-icon">📋</div>
+
+                <h3>Check Syllabus</h3>
+
+                <p>
+                    Understand your curriculum and subjects.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-icon">📚</div>
+
+                <h3>Study Notes</h3>
+
+                <p>
+                    Access subject-wise study material.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-icon">📝</div>
+
+                <h3>Practice</h3>
+
+                <p>
+                    Practice questions and MCQs.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-icon">🔄</div>
+
+                <h3>Revise</h3>
+
+                <p>
+                    Use quick revision resources before exams.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="back-section">
+
+        <a href="first-year.html" class="back-btn">
+            ← Back to 1st Year Dashboard
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 BHMS Student Hub • Study • Practice • Revise
+    </p>
+
+    <p>
+        Curriculum reference: National Commission for Homoeopathy (NCH)
+    </p>
+
+</footer>
+
+</body>
+</html>
