@@ -62,7 +62,8 @@
 
     nav {
       display: flex;
-      gap: 25px;
+      gap: 22px;
+      align-items: center;
     }
 
     nav a {
@@ -369,6 +370,115 @@
       font-weight: bold;
     }
 
+    /* ABOUT */
+    .about-section {
+      background: #ffffff;
+    }
+
+    .about-card {
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(135deg, #f4fbf8, #f7fbff);
+      border: 1px solid #dcebe4;
+      border-radius: 24px;
+      padding: 45px;
+      box-shadow: 0 12px 35px rgba(25, 50, 70, 0.06);
+      text-align: center;
+    }
+
+    .about-badge {
+      display: inline-block;
+      background: #e8f5ef;
+      color: #16845b;
+      border: 1px solid #ccebdd;
+      padding: 7px 15px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .about-card h2 {
+      color: #123b5d;
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    .founder-icon {
+      width: 82px;
+      height: 82px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: #e8f5ef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+    }
+
+    .about-card h3 {
+      color: #123b5d;
+      font-size: 25px;
+      margin-bottom: 3px;
+    }
+
+    .founder-title {
+      color: #16845b;
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    .about-card p {
+      max-width: 780px;
+      margin: 0 auto 18px;
+      color: #5d6871;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .about-resources {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 30px 0;
+    }
+
+    .about-resource {
+      background: white;
+      border: 1px solid #e5e9ed;
+      border-radius: 12px;
+      padding: 15px 8px;
+      font-size: 13px;
+      color: #123b5d;
+      font-weight: 700;
+    }
+
+    .vision-box {
+      margin-top: 28px;
+      padding: 25px;
+      background: #123b5d;
+      border-radius: 16px;
+      color: white;
+    }
+
+    .vision-box h4 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .vision-box p {
+      color: #d9e5ec;
+      margin-bottom: 0;
+    }
+
+    .about-tagline {
+      margin-top: 25px;
+      color: #16845b;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
     /* CTA */
     .cta {
       background: #eaf8f1;
@@ -466,6 +576,10 @@
       .footer-container {
         grid-template-columns: 1fr;
       }
+
+      .about-resources {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 520px) {
@@ -512,6 +626,33 @@
         width: 100%;
         text-align: center;
       }
+
+      .about-card {
+        padding: 30px 18px;
+        border-radius: 18px;
+      }
+
+      .about-card h2 {
+        font-size: 27px;
+      }
+
+      .about-card h3 {
+        font-size: 22px;
+      }
+
+      .about-card p {
+        font-size: 14px;
+      }
+
+      .about-resources {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+      }
+
+      .about-resource {
+        font-size: 12px;
+        padding: 13px 5px;
+      }
     }
   </style>
 </head>
@@ -533,6 +674,7 @@
         <a href="#resources">Resources</a>
         <a href="#tools">Tools</a>
         <a href="#updates">Updates</a>
+        <a href="#about">About</a>
       </nav>
 
     </div>
@@ -561,6 +703,7 @@
         </p>
 
         <div class="hero-buttons">
+
           <a href="#years" class="btn btn-primary">
             Explore Study Material
           </a>
@@ -568,6 +711,7 @@
           <a href="#tools" class="btn btn-secondary">
             Student Tools
           </a>
+
         </div>
 
       </div>
@@ -901,6 +1045,123 @@
   </section>
 
 
+  <!-- ABOUT US -->
+  <section class="about-section" id="about">
+
+    <div class="section-container">
+
+      <div class="about-card">
+
+        <span class="about-badge">
+          🎓 About BHMS Student Hub
+        </span>
+
+        <h2>About Us</h2>
+
+
+        <div class="founder-icon">
+          👨‍🎓
+        </div>
+
+        <h3>Sumit Gaikwad</h3>
+
+        <div class="founder-title">
+          Founder — BHMS Student Hub
+        </div>
+
+
+        <p>
+          BHMS Student Hub is a student-focused educational platform
+          created to make BHMS study resources simple, organized and
+          easily accessible in one place.
+        </p>
+
+
+        <p>
+          I am <strong>Sumit Gaikwad, a BHMS student</strong>, and I created
+          BHMS Student Hub with the idea of building a useful digital study
+          space specifically for BHMS students.
+        </p>
+
+
+        <p>
+          The platform is designed to provide resources from
+          <strong>1st Year BHMS to Internship</strong>, including notes,
+          syllabus, university question papers, important questions,
+          MCQ practice, viva questions, quick revision and exam
+          preparation resources.
+        </p>
+
+
+        <div class="about-resources">
+
+          <div class="about-resource">
+            📖 Notes
+          </div>
+
+          <div class="about-resource">
+            📝 Question Papers
+          </div>
+
+          <div class="about-resource">
+            🎯 Important Questions
+          </div>
+
+          <div class="about-resource">
+            🧠 MCQ Practice
+          </div>
+
+          <div class="about-resource">
+            🎤 Viva Questions
+          </div>
+
+          <div class="about-resource">
+            📚 Syllabus
+          </div>
+
+          <div class="about-resource">
+            🔄 Quick Revision
+          </div>
+
+          <div class="about-resource">
+            🎓 Exam Preparation
+          </div>
+
+        </div>
+
+
+        <p>
+          As a BHMS student myself, I understand how difficult it can be
+          to find study material scattered across different sources.
+          The goal of BHMS Student Hub is to bring these resources together
+          in a simple, organized and student-friendly platform.
+        </p>
+
+
+        <div class="vision-box">
+
+          <h4>🎯 Our Vision</h4>
+
+          <p>
+            To create a reliable and easy-to-use digital study hub where
+            BHMS students can find the resources they need throughout
+            their academic journey — from 1st Year to Internship.
+          </p>
+
+        </div>
+
+
+        <div class="about-tagline">
+          BHMS Student Hub — Learn. Practice. Prepare. Succeed.
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
   <!-- CTA -->
   <section class="cta">
 
@@ -947,6 +1208,7 @@
         <a href="#years">Study Material</a>
         <a href="#resources">Resources</a>
         <a href="#tools">Student Tools</a>
+        <a href="#about">About Us</a>
 
       </div>
 
