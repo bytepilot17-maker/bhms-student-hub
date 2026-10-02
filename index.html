@@ -404,16 +404,24 @@
       margin-bottom: 25px;
     }
 
-    .founder-icon {
-      width: 82px;
-      height: 82px;
-      margin: 0 auto 15px;
+    /* FOUNDER PHOTO */
+    .founder-photo {
+      width: 145px;
+      height: 145px;
+      margin: 0 auto 18px;
       border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #ffffff;
+      box-shadow: 0 10px 28px rgba(18, 59, 93, 0.18);
       background: #e8f5ef;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 42px;
+    }
+
+    .founder-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
     }
 
     .about-card h3 {
@@ -652,6 +660,12 @@
       .about-resource {
         font-size: 12px;
         padding: 13px 5px;
+      }
+
+      .founder-photo {
+        width: 125px;
+        height: 125px;
+        border-width: 4px;
       }
     }
   </style>
@@ -1059,9 +1073,11 @@
         <h2>About Us</h2>
 
 
-        <div class="founder-icon">
-          👨‍🎓
+        <!-- FOUNDER PHOTO -->
+        <div class="founder-photo">
+          <img src="sumit-gaikwad.jpg" alt="Sumit Gaikwad - Founder of BHMS Student Hub">
         </div>
+
 
         <h3>Sumit Gaikwad</h3>
 
